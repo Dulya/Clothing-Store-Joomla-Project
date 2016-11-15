@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Creating your first book</title>
+<style type="text/css">
+<!--
+.notes {
+	color: #999;
+	display: block;
+	padding: 5px;
+	margin: 0 0 0 30px;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #333;
+	background-color: #fff;
+}
+h1 {
+	font-size: 20px;
+	color: #0066CC;
+}
+h2 {
+	font-size: 16px;
+	color: #333333;
+}
+a:link {
+	color: #0066FF;
+	text-decoration: none;
+}
+a:visited {
+	color: #0099FF;
+	text-decoration: none;
+}
+a:hover {
+	color: #0066CC;
+	text-decoration: underline;
+}
+a:active {
+	color: #000099;
+}
+.courier {
+	color: #000;
+	font-style: italic;
+}
+-->
+</style>
+</head>
+
+<body>
+<h1>Creating Your First Book</h1>
+<p>This tutorial takes you through the steps of creating your first book and helps you understand how the component works.   Please note that some of parameters are explained next to the input fields – just take your time!  <br />
+  <span class="courier">Technical support does not cover issues relating to the incorrect operation of the component resulting from hacks, mods, patches and similar alterations to  Joomla! and component source code.</span></p>
+<p>The basic steps for creating a book on your website are:</p>
+<p>1. <a href="#1">Installation.</a><br>   
+2. <a href="#2">Uploading files for the book.</a><br>
+3. <a href="#3">Creating the book.</a><br>
+4. <a href="#4">Adding pages to the book.</a><br>
+5. <a href="#5">Binding books, book list or categories list to menu items</a></p>
+<h2><a name="1" title="1"></a>1. Installation</h2>
+<p>The standard installation and deinstallation of components is covered in the official documentation available from <a href="http://docs.joomla.org" target="_blank">http://docs.joomla.org</a></p>
+<p>1.1. To install the component call up the Joomla! administration interface.<br>   
+1.2. Open the component installation tab (<span class="courier">Extensions &gt; Extension Manager</span>).<br>
+   1.3. Select the component file to be uploaded from your computer (<span class="courier">com_flippingbook_personal_for_1.5.zip for example</span>). Click <span class="courier">Upload &amp; Install</span>.<br>
+      1.4. Make sure no errors are reported during installation.<br>   
+   <span class="notes">If there are errors, please check that Joomla folders are accessible for writing (Site &gt; System Information &gt; Directory Permissions) and PHP Safe Mode is turned off (Site &gt; System Information &gt; PHP Settings &gt; Safe Mode: off)</span>
+   1.5. Installation is complete. The component is available from the main menu of the administration panel (<span class="courier">Components &gt; FlippingBook</span>).</p>
+<h2><a name="2" title="2"></a>2. Uploading files for the book</h2>
+<p>FlippingBook files are stored in <span class="courier">/images/flippingbook/</span> folder.</p>
+<p>2.1. Prepare files containing the book pages. These can only be JPG, PNG images or SWF files. <span class="notes">Please use only Latin letters or numbers in the file names.<br>
+  No special symbols are allowed.<br>
+We recommend creating meaningful filenames – e.g. my-book_001.jpg, my-book_002.jpg... my-book_zoom_001.jpg, my-book_zoom_002.jpg...</span>
+2.2. Open the file file manager <span class="courier">(Components &gt; FlippingBook &gt; Manage Files)</span>.<br>
+2.3. Create a new folder for your book (<span class="courier">Create a new folder</span> link). Open the created folder.<br />
+2.4. Select the file for uploading from your computer and click <span class="courier">Upload</span>.</p>
+<h2><a name="3" title="3"></a>3. Creating the Book</h2>
+<p>3.1. Open the Book Manager tab (<span class="courier">Components &gt; FlippingBook &gt; Manage Books</span>).<br> 
+3.2. Click <span class="courier">New</span> in the upper panel.<br>
+3.3. Enter the book name and description if necessary.<br>
+3.4. Fill in other book parameters. Their descriptions are given on the same page.<br>   
+3.5. Click <span class="courier">Save</span> icon.</p>
+<h2><a name="4" title="4"></a>4. Adding Pages to the Book</h2>
+<p><strong>Manual Adding Pages</strong></p>
+<p>4.1.1. Open the Page Manager <span class="courier">(Components &gt; FlippingBook &gt; Manage Pages)</span>.<br> 
+  4.1.2. Click <span class="courier">New</span> in the upper panel.<br>
+ 4.1.3. Select the page file and the book to which the page is to be added.<br>
+4.1.4. Click   <span class="courier">Save</span> in the upper panel.<br>
+ 4.1.5. Repeat the above steps for all the book pages.<br>
+4.1.6. Check the page numbers. If they are wrong use the Up and Down arrows to set them properly.<br />
+4.1.7. If necessary, specify the enlarged image file and the page link.</p>
+<p><strong>Batch Adding Pages</strong></p>
+<p>4.2.1. Prepare files for your book. Files for pages must be named e.g. <span class="courier">my-book_001.jpg</span>, <span class="courier">my-book_002.jpg</span>... <br />
+4.2.2. If you going to use high-quality images for zoomed pages state, prepare images and name them e.g. <span class="courier">my-book_zoom_001.jpg</span>, <span class="courier">my-book_zoom_002.jpg</span>...<br />
+4.2.3. Upload files to /images/flippingbook/your_book/ folder.<br />
+4.2.4. Open <span class="courier">Components &gt; FlippingBook &gt; Batch Adding Pages</span>.<br />
+4.2.5. Select the book in the dropdown list and folder with uploaded files.<br />
+4.2.5. If you want to use high-quality images for zooming, set <span class="courier">Mode - Advanced</span>, <span class="courier">Prefix For Pages - my-book_</span>, <span class="courier">Prefix For Zoomed Images - zoom_</span>. Click <span class="courier">Save</span>.<br />
+4.2.6. If you going use single image for normal and zoomed state, set <span class="courier">Mode - Simple</span>. Click <span class="courier">Save</span>.</p>
+<h2><a name="5" title="5"></a>5. Binding Book, Book List or Categories List to Menu Items</h2>
+<p>5.1. Open the Menu Editor (<span class="courier">Menu &gt; target menu where you want the book reference to appear</span>).<br>   
+5.2. Click <span class="courier">New </span>in the upper panel.<br>   
+5.3. Click <span class="courier">FlippingBook</span>. Select one of layouts. Specify parameters in the right column (<span class="courier">Book Name for Book Layout</span> or <span class="courier">Category Name for Book List Layout</span>). Click <span class="courier">Save</span>.</p>
+</body>
+</html>

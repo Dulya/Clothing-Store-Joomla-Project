@@ -1,0 +1,675 @@
+/**
+ * @package    AcySMS for Joomla!
+ * @version    3.1.0
+ * @author     acyba.com
+ * @copyright  (C) 2009-2016 ACYBA S.A.R.L. All rights reserved.
+ * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+ */
+
+
+
+#acysmsmenu_leftside{
+	z-index: 50;
+	overflow: hidden;
+}
+
+.iconsonly #acysmsmenu_leftside{
+	overflow: visible;
+}
+
+#acysmsmenu_leftside ul{
+	padding: 0px;
+	margin: 0px
+}
+
+#acysmsmenu_leftside li{
+	list-style-type: none;
+	line-height: 8px;
+}
+
+#acysmsmenu_leftside li:hover a{
+	text-decoration: none
+}
+
+#acysmsmenu_leftside a{
+	color: #c0c8d7;
+	padding: 10px 0px;
+	font-size: 12px;
+}
+
+#acysmsmenu_leftside .mainelement{
+	text-transform: uppercase;
+	cursor: pointer;
+	font-weight: bold;
+	background-color: #2f323a;
+	transition: background 0.3s ease;
+}
+
+#acysmsmenu_leftside li.mainelement:hover{
+	background-color: #42454d
+}
+
+#acysmsmenu_leftside li#mainelementmyacysms:hover{
+	background-color: #2f323a
+}
+
+#acysmsmenu_leftside .mainelement:hover, #acysmsmenu_leftside .mainelement:hover a, #acysmsmenu_leftside .mainelement.opened a{
+	color: #fff;
+}
+
+#acysmsmenu_leftside .mainelement .acysmssubmenu a:hover{
+	background-color: #25282e;
+	color: #fff;
+}
+
+#acysmsmenu_leftside .mainelement .acysmssubmenu a{
+	color: #a6a9b3
+}
+
+#acysmsmenu_leftside .mainelement .acysmssubmenu{
+	display: none
+}
+
+#acysmsmenu_leftside .mainelement.opened .acysmssubmenu{
+	display: block
+}
+
+#acysmsmenu_leftside .mainelement a{
+	display: inline-block;
+	width: 220px;
+	min-height: 20px;
+	text-shadow: 1px 1px 2px #222222;
+}
+
+#acysmsmenu_leftside .mainelement a span{
+	display: inline-block;
+	float: left;
+	line-height: 15px;
+	margin-top: 3px;
+	max-width: 160px;
+}
+
+#acysmsmenu_leftside .mainelement .acysmssubmenulink span{
+	width: 150px;
+}
+
+.iconsonly #acysmsmenu_leftside .mainelement a span{
+	max-width: 200px
+}
+
+.iconsonly #acysmsmenu_leftside .mainelement a{
+	width: 100%;
+}
+
+#acysmsmenu_leftside .mainelement.sel{
+	background-color: #42454d;
+}
+
+.iconsonly #acysmsmenu_leftside .sel a{
+	width: 26px
+}
+
+#acysmsmenu_leftside .sel a i{
+	padding: 0 10px 0 2px
+}
+
+#acysmsmenu_leftside .sel .acysmssubmenulink i{
+	padding: 0px 14px
+}
+
+.iconsonly #acysmsmenu_leftside .sel .acysmssubmenu a{
+	width: 100%;
+	max-width: 190px;
+}
+
+#acysmsmenu_leftside .sel a{
+	border-left: 4px solid #4aa8ce;
+	height: 20px;
+	padding: 10px;
+	width: 206px;
+	color: #fff;
+}
+
+#acysmsallcontent.iconsonly .sel ul{
+	display: none
+}
+
+#acysmsmenu_leftside .acysmssubmenu{
+	text-transform: none;
+	height: 32px
+}
+
+#acysmsmenu_leftside .acysmssubmenu:hover a{
+	color: #fff
+}
+
+#acysmsmenu_leftside .acysmssubmenu a{
+	color: #a6a9b3;
+	font-size: 15px;
+	font-weight: normal;
+	display: block;
+	clear: both;
+	padding: 10px;
+	max-width: 200px;
+}
+
+#acysmsmenu_leftside .sel .acysmssubmenu a{
+	border: none
+}
+
+#acysmsmenu_leftside .acysmsmenu_slide span{
+	background-color: #4aa8ce;
+	cursor: pointer;
+	display: block;
+	padding: 12px 0px;
+	color: #fff;
+	text-align: right;
+	height: 16px;
+	border-bottom: 1px solid #42454d;
+}
+
+#acysmsallcontent.iconsonly #acysmsmenu_leftside{
+	width: 50px;
+}
+
+#acysmsmenu_leftside{
+	transition: width 0.4s ease;
+	z-index: 50;
+	overflow: hidden;
+	background-color: #2f323a;
+	position: absolute;
+	left: 0;
+	width: 230px;
+}
+
+#acysmsmenu_leftside .opened ul{
+	z-index: 1000;
+	padding: 6px 0px;
+	background-color: #25282e;
+	-moz-box-shadow: 0 5px 6px #222222 inset;
+	-webkit-box-shadow: 0 5px 6px #222222 inset;
+	box-shadow: 0 5px 6px #222 inset
+}
+
+.iconsonly #acysmsmenu_leftside .mainelement ul{
+	-moz-box-shadow: 0 5px 6px #222222 inset;
+	-webkit-box-shadow: 0 5px 6px #222222 inset;
+	box-shadow: 0 5px 6px #222222 inset
+}
+
+.iconsonly #acysmsmenu_leftside .opened ul{
+	display: none
+}
+
+#acysmsallcontent.iconsonly .mainelement:hover li{
+	padding-left: 0px;
+}
+
+#acysmsallcontent.iconsonly .mainelement:hover li i{
+	padding: 0px 10px;
+	font-size: 15px;
+}
+
+#acysmsallcontent.iconsonly .subtitle, #acysmsallcontent.iconsonly i.smsicon-down{
+	display: none
+}
+
+#acysmsallcontent.iconsonly li.mainelement{
+	height: 40px;
+	position: relative;
+}
+
+#acysmsallcontent.iconsonly .mainelement:hover .acysmssubmenu{
+	display: block
+}
+
+#acysmsmenu_leftside .acysmsmenu_slide i{
+	padding-right: 18px;
+	font-size: 16px
+}
+
+#acysmsmenu_leftside .mainelement i{
+	padding-right: 14px;
+	padding-left: 14px;
+	line-height: 8px;
+	font-size: 14px;
+	float: left;
+	margin-top: 5px;
+}
+
+#acysmsmenu_leftside .acysmssubmenulink{
+	text-shadow: 1px 1px 2px #222222;
+}
+
+#acysmsmenu_leftside .mainelement i.smsicon-down{
+	float: right;
+	padding-right: 0px
+}
+
+#acysmsmenu_leftside .mainelement.opened i.smsicon-down::before{
+	float: right;
+	padding-right: 0px;
+	content: "\e603" !important;
+}
+
+@keyframes deploy{
+	from{
+		max-height: 0px;
+	}
+	to{
+		max-height: 800px;
+	}
+}
+
+@-webkit-keyframes deploy{
+	from{
+		max-height: 0px;
+	}
+	to{
+		max-height: 800px;
+	}
+}
+
+@-ms-keyframes deploy{
+	from{
+		max-height: 0px;
+	}
+	to{
+		max-height: 800px;
+	}
+}
+
+@-o-keyframes deploy{
+	from{
+		max-height: 0px;
+	}
+	to{
+		max-height: 800px;
+	}
+}
+
+@-moz-keyframes deploy{
+	from{
+		max-height: 0px;
+	}
+	to{
+		max-height: 800px;
+	}
+}
+
+#acysmsmenu_leftside .opened ul{
+	-moz-animation-duration: 2s;
+	-moz-animation-name: deploy;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-name: deploy;
+	-ms-animation-duration: 2s;
+	-ms-animation-name: deploy;
+	-o-animation-duration: 2s;
+	-o-animation-name: deploy;
+	animation-duration: 2s;
+	animation-name: deploy;
+	overflow: hidden;
+}
+
+@keyframes deploy_horizontal{
+	from{
+		max-width: 0px;
+	}
+	to{
+		max-width: 800px;
+	}
+}
+
+@-moz-keyframes deploy_horizontal{
+	from{
+		max-width: 0px;
+	}
+	to{
+		max-width: 800px;
+	}
+}
+
+@-o-keyframes deploy_horizontal{
+	from{
+		max-width: 0px;
+	}
+	to{
+		max-width: 800px;
+	}
+}
+
+@-webkit-keyframes deploy_horizontal{
+	from{
+		max-width: 0px;
+	}
+	to{
+		max-width: 800px;
+	}
+}
+
+@-ms-keyframes deploy_horizontal{
+	from{
+		max-width: 0px;
+	}
+	to{
+		max-width: 800px;
+	}
+}
+
+#acysmsallcontent.iconsonly .mainelement:hover ul{
+	animation-duration: 0.4s;
+	animation-name: deploy_horizontal;
+
+	-moz-animation-duration: 0.4s;
+	-moz-animation-name: deploy_horizontal;
+
+	-webkit-animation-duration: 0.4s;
+	-webkit-animation-name: deploy_horizontal;
+
+	-o-animation-duration: 0.4s;
+	-o-animation-name: deploy_horizontal;
+
+	-ms-animation-duration: 0.4s;
+	-ms-animation-name: deploy_horizontal;
+
+	overflow: hidden;
+	background-color: #25282e;
+	border-bottom: none;
+	display: inline-block;
+	left: 50px;
+	padding: 10px 0;
+	position: relative;
+	width: 210px;
+	top: -50px;
+}
+
+
+
+#myacysmsarea{
+	color: #c2d5f3;
+	font-size: 13px;
+	padding: 15px;
+	text-transform: none;
+	font-weight: normal
+}
+
+.iconsonly #mainelementmyacysms{
+	display: none
+}
+
+.iconsonly #mainelementbalancechecker{
+	display: none
+}
+
+#acysmsmenu_leftside .mainelement i.smsicon-down{
+	float: right;
+	padding-right: 0px;
+}
+
+#mainelementmyacysms{
+	margin-top: 5px;
+	padding-top: 5px;
+	border-top: 1px solid #26282f;
+}
+
+#acysmsmenu_leftside .mainelement#mainelementmyacysms{
+	cursor: auto;
+}
+
+#myacysmsarea button{
+	background-color: #2A81A4;
+	background-image: none;
+	border: medium none;
+	border-radius: 4px;
+	box-shadow: 0 2px 3px #333;
+	color: #ffffff;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 5px 10px;
+	text-shadow: none;
+	transition: background 0.3s ease 0s;
+}
+
+#myacysmsarea button:hover{
+	background-color: #4aa8ce;
+	color: #fff;
+	text-decoration: none;
+	transition: background 0.3s ease;
+}
+
+#myacysms_version a.acy_updateversion:hover{
+	background-color: #f1ce72;
+}
+
+#acysmsallcontent.iconsonly .mainelement:hover .subtitle{
+	display: block;
+	position: relative;
+	left: 50px;
+	top: -26px;
+	height: 18px;
+	background-color: #42454D;
+	line-height: 18px;
+	padding: 11px;
+	width: 188px;
+}
+
+#acysmsallcontent.iconsonly .sel:hover .subtitle{
+	display: block;
+	width: 188px;
+	position: relative;
+	left: 36px;
+	background-color: #42454d;
+	line-height: 18px;
+}
+
+#acysmsallcontent.iconsonly .mainelement:hover ul{
+	top: 40px;
+	position: absolute;
+}
+
+#acysmsallcontent.iconsonly .sel.mainelement:hover ul{
+	position: absolute;
+	width: 210px;
+	top: 40px;
+}
+
+#acysmsmenu_leftside .acysmsversion_needtoupdate a, #acysmsmenu_leftside .acysmslicence_expired a, #acysmsmenu_leftside .acysmsversion_uptodate{
+	color: #fff;
+	padding: 10px 10px 0;
+	border-radius: 4px;
+	width: auto;
+	font-weight: bold;
+	box-shadow: 0 2px 3px #333;
+	min-height: 16px;
+	font-size: 12px;
+}
+
+.acysmsversion_needtoupdate .acy_updateversion{
+	background-color: #deb957;
+}
+
+.acysmslicence_expired .acy_subscriptionexpired, .acysmslicence_expired .acy_attachlicence{
+	background-color: #e66a6a;
+}
+
+.acysmslicence_expired .acy_subscriptionexpired:hover, .acysmslicence_expired .acy_attachlicence:hover{
+	background-color: #ff9090;
+}
+
+#acysmsmenu_leftside .acysmsversion_uptodate{
+	background-color: #7ead54;
+	display: inline-block;
+	padding: 10px 10px 2px;
+}
+
+#acysmsmenu_leftside a{
+	padding-bottom: 2px;
+}
+
+#myacysmsarea{
+	color: #c0c8d7;
+	font-size: 13px;
+	padding: 15px;
+	text-transform: none;
+	font-weight: normal;
+}
+
+#acysmsmenu_leftside #myacysmsarea i{
+	font-size: 14px;
+	padding-right: 10px;
+	padding-left: 0px;
+}
+
+#acysmsmenu_leftside #myacysmsarea .acyicon-import{
+	margin-bottom: 10px;
+	margin-top: 0px;
+}
+
+#acysmsmenu_leftside #myacysmsarea .acyicon-renew{
+	margin: 0px;
+	font-size: 15px;
+}
+
+#acysmsmenu_leftside .myacysmsbuttons{
+	margin-top: 10px;
+}
+
+#myacysms_expiration{
+	margin-top: 15px;
+}
+
+#acysmsmenu_leftside .acy_attachlicence .acyicon-attach{
+	margin-top: 0px;
+}
+
+#mybalancechecker button#newCredits:hover{
+	background-color: #4aa8ce;
+	color: #fff;
+	text-decoration: none;
+	transition: background 0.3s ease;
+}
+
+#mybalancechecker button#refreshBalance:hover{
+	background-color: #4aa8ce;
+	color: #fff;
+	text-decoration: none;
+	transition: background 0.3s ease;
+}
+
+#mybalancechecker button#newCredits{
+
+	background-color: #2a81a4;
+	border: medium none;
+	border-radius: 4px;
+	box-shadow: 0 2px 3px #333;
+	color: #ffffff;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 5px 10px;
+	text-shadow: none;
+	transition: background 0.3s ease 0s;
+
+}
+
+#mybalancechecker button#refreshBalance{
+	background-color: #2a81a4;
+	border: medium none;
+	border-radius: 4px;
+	box-shadow: 0 2px 3px #333;
+	color: #ffffff;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 5px 10px;
+	text-shadow: none;
+	transition: background 0.3s ease 0s;
+}
+
+#mybalancechecker{
+	color: #c0c8d7;
+	font-size: 13px;
+	text-transform: none;
+	font-weight: normal;
+	padding: 15px;
+	border-top: 1px solid #26282f;
+
+}
+
+#mybalancechecker b{
+	color: #ffffff;
+}
+
+#mybalancechecker .mybalance_left{
+	margin-bottom: 20px;
+	line-height: 18px;
+}
+
+#mybalancechecker #nogateway{
+	margin-bottom: 20px;
+	line-height: 16px;
+}
+
+#mybalancechecker #mybalance_progress{
+	margin-bottom: 15px;
+}
+
+#acysmsmenu_leftside .mainelement#mainelementbalancechecker{
+	cursor: auto;
+}
+
+#acysmsmenu_leftside li#mainelementbalancechecker:hover{
+	background-color: #2f323a
+}
+
+#mybalancechecker progress{
+	-webkit-appearance: none;
+	height: 8px;
+	width: 200px;
+	background-color: #42454D;
+	border-radius: 4px;
+	border: none;
+
+}
+
+#acysmsmenu_leftside #mybalancechecker i{
+	font-size: 14px;
+	padding-right: 10px;
+	padding-left: 0px;
+}
+
+#low_balance::-webkit-progress-bar{
+	background: transparent;
+
+}
+
+#high_balance::-webkit-progress-bar{
+	background: transparent;
+
+}
+
+#high_balance::-webkit-progress-value{
+	background-color: #2a81a4;
+	height: 4px;
+	margin: 2px;
+	border-radius: 2px;
+}
+
+#high_balance::-moz-progress-bar{
+	background-color: #2a81a4;
+	height: 4px;
+	margin: 2px;
+	border-radius: 2px;
+}
+
+#low_balance::-webkit-progress-value{
+	background-color: #D75C55;
+	height: 4px;
+	margin: 2px;
+	border-radius: 2px;
+}
+
+#low_balance::-moz-progress-bar{
+	background-color: #D75C55;
+	height: 4px;
+	margin: 2px;
+	border-radius: 2px;
+}

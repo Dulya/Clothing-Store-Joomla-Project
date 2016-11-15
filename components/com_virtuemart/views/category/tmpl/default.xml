@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_VIRTUEMART_CATEGORY_VIEW_DEFAULT_TITLE">
+		<message><![CDATA[COM_VIRTUEMART_CATEGORY_VIEW_DEFAULT_DESC]]></message>
+	</layout>
+	<fields name="request">
+		<fieldset name="request"
+			addfieldpath="/administrator/components/com_virtuemart/fields">
+			<field name="virtuemart_category_id" type="vmcategory"
+				label="COM_VIRTUEMART_CATEGORY_FIELD_SELECT_TITLE" required="true"
+				extension="com_virtuemart"
+				description="COM_VIRTUEMART_CATEGORY_FIELD_SELECT_TITLE_DESC" />
+            <field name="virtuemart_manufacturer_id" type="manufacturer"
+                   default="0"
+                   label="COM_VIRTUEMART_MANUFACTURER_FIELD_SELECT_TITLE"
+                   required="false"
+                   description="COM_VIRTUEMART_MANUFACTURER_FIELD_SELECT_TITLE_DESC" />
+			<field name="categorylayout" type="vmlayout"
+				label="COM_VIRTUEMART_CATEGORY_FIELD_SELECT_LAYOUT" required="true"
+				extension="com_virtuemart"
+				description="COM_VIRTUEMART_CATEGORY_FIELD_SELECT_LAYOUT_DESC" />
+            <field name="showcategory" type="radio" default="1"
+                   label="COM_VIRTUEMART_CATEGORY_FIELD_SELECT_SHOWCAT"
+                   extension="com_virtuemart"
+                   description="COM_VIRTUEMART_CATEGORY_FIELD_SELECT_SHOWCAT_DESC" >
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="showproducts" type="radio" default="1"
+                   label="COM_VIRTUEMART_CATEGORY_FIELD_SELECT_SHOWPROD"
+                   extension="com_virtuemart"
+                   description="COM_VIRTUEMART_CATEGORY_FIELD_SELECT_SHOWPROD_DESC" >
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="showsearch" type="radio" default="1"
+                   label="COM_VM_CATEGORY_FIELD_SELECT_SHOWSEARCH"
+                   extension="com_virtuemart"
+                   description="COM_VM_CATEGORY_FIELD_SELECT_SHOWSEARCH_TIP" >
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="productsublayout" type="vmproductsublayout"
+                   label="COM_VIRTUEMART_CFG_PRODUCTS_SUBLAYOUT" required="true"
+                   extension="com_virtuemart"
+                   description="COM_VIRTUEMART_CFG_PRODUCTS_SUBLAYOUT_TIP" />
+        </fieldset>
+        <fieldset name="request" >
+            <field name="products_per_row" type="text"
+                   label="COM_VIRTUEMART_ADMIN_CFG_PRODUCTS_PER_ROW"
+                   extension="com_virtuemart"
+                   description="COM_VIRTUEMART_ADMIN_CFG_PRODUCTS_PER_ROW_TIP" />
+
+            <field name="featured" type="radio" default="0"
+                   filter = "boolean"
+                   label="COM_VIRTUEMART_ADMIN_CFG_SHOW_FEATURED"
+                   extension="com_virtuemart"
+                   description="COM_VIRTUEMART_ADMIN_CFG_SHOW_FEATURED_TIP" >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+            </field>
+            <field name="featured_rows" type="text"
+                   label="COM_VIRTUEMART_ADMIN_CFG_FEAT_PROD_ROWS"
+                   extension="com_virtuemart"
+                   description="COM_VIRTUEMART_ADMIN_CFG_FEAT_PROD_ROWS_TIP" />
+
+            <field name="latest" type="radio" default="0"
+                   label="COM_VIRTUEMART_ADMIN_CFG_SHOW_LATEST"
+                   extension="com_virtuemart"
+                   description="COM_VIRTUEMART_ADMIN_CFG_SHOW_LATEST_TIP" >
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="latest_rows" type="text"
+                   label="COM_VIRTUEMART_ADMIN_CFG_LAT_PROD_ROWS"
+                   extension="com_virtuemart"
+                   description="COM_VIRTUEMART_ADMIN_CFG_LAT_PROD_ROWS_EXPLAIN" />
+
+            <field name="topten" type="radio" default="0"
+                   label="COM_VIRTUEMART_ADMIN_CFG_SHOW_TOPTEN"
+                   extension="com_virtuemart"
+                   description="COM_VIRTUEMART_ADMIN_CFG_SHOW_TOPTEN_TIP" >
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="topten_rows" type="text"
+                   label="COM_VIRTUEMART_ADMIN_CFG_TOPTEN_PROD_ROWS"
+                   extension="com_virtuemart"
+                   description="COM_VIRTUEMART_ADMIN_CFG_TOPTEN_PROD_ROWS_TIP" />
+
+            <field name="recent" type="radio" default="0"
+                   label="COM_VIRTUEMART_ADMIN_CFG_SHOW_RECENT"
+                   extension="com_virtuemart"
+                   description="COM_VIRTUEMART_ADMIN_CFG_SHOW_RECENT_TIP" >
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="recent_rows" type="text"
+                   label="COM_VIRTUEMART_ADMIN_CFG_REC_PROD_ROWS"
+                   extension="com_virtuemart"
+                   description="COM_VIRTUEMART_ADMIN_CFG_REC_PROD_ROWS_TIP" />
+		</fieldset>
+	</fields>
+</metadata>
+

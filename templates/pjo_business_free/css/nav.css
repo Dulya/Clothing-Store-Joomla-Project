@@ -1,0 +1,157 @@
+/* ======== NAVIGATION ===== */
+#hor_nav {
+	padding: 0px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#hor_nav .menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#hor_nav .menu .icon-angle-right {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -6px;
+	font-size: 12px;
+}
+
+#hor_nav .menu > li {
+	display: block;
+	float: left;
+}
+
+#hor_nav .menu > li ul {
+}
+
+#hor_nav .menu ul {
+	position: absolute;
+	left: 0;
+	top: 100%;
+	margin: 10px 0 0 0;
+	_margin: 0;
+	opacity: 0;
+	transition: all 0.4s ease-in-out;
+	visibility: hidden;
+	z-index: 99;
+}
+
+#hor_nav .menu ul ul {
+	left: 100%;
+	top: 0;
+}
+
+#hor_nav .menu ul ul li {
+	width: 100%;
+}
+
+#hor_nav .menu li {
+	position: relative;
+	list-style: none;
+}
+
+#hor_nav .menu li:hover > ul {
+	margin: 0;
+	opacity: 1;
+	visibility: visible;
+}
+
+#hor_nav .menu a {
+	display: block;
+	position: relative;
+	color: #666;
+	text-transform: none;
+	font-weight: bold;
+	border-right: 1px solid #FFFFFF;
+	border-bottom: 0;
+}
+
+#hor_nav .menu li a:hover {
+	-webkit-transition: all 2s ease;
+	transition: all 2s ease;
+}
+
+#hor_nav .menu > li > a:hover, #hor_nav .menu > li.sfHover > a, #hor_nav .menu > .active > a, #hor_nav .active > a:hover, #hor_nav .active > a:hover {
+}
+
+#hor_nav .menu > .active > a, #hor_nav li.active > a {
+}
+
+#hor_nav .menu > li {
+	margin-right: 0 !important;
+}
+
+#hor_nav .menu a {
+	text-align: left;
+	text-decoration: none;
+	cursor: pointer;
+	padding: 0 10px;
+	font-size: 14px;
+}
+
+#hor_nav .menu ul {
+	min-width: 200px;
+}
+
+#hor_nav .menu ul {
+}
+
+#hor_nav .menu li:hover ul {
+	margin-top: 1px;
+}
+
+#hor_nav .menu ul ul.sub-menu {
+	margin-top: -1px;
+	margin-left: 1px;
+}
+
+#hor_nav .menu ul li {
+}
+
+#hor_nav .menu ul li:first-child {
+}
+
+#hor_nav .menu ul li:last-child {
+	border: 0;
+}
+
+#hor_nav .menu ul li > a:hover, #hor_nav .menu ul li > .active > a, #hor_nav ul li.active > a {
+}
+
+#hor_nav .menu ul a {
+	display: block;
+	height: auto;
+	margin: 0px;
+	padding: 8px 15px;
+	text-transform: none;
+	border: 0px;
+	line-height: 20px;
+}
+
+#hor_nav .selector {
+	display: none;
+}
+
+#hor_nav ul.sub-menu .icon-angle-down:before {
+}
+
+#hor_nav ul.sub-menu a {
+	font-size: 12px;
+}
+
+#hor_nav i {
+	text-align: right;
+}
+
+#menu-icon {
+	display: none;
+}
+
+/*PADDING LI*/
+#hor_nav .menutitle {
+	padding-left: 10px;
+	padding-right: 10px;
+}

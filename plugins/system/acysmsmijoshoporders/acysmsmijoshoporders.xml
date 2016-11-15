@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<extension type="plugin" version="2.5" method="upgrade" group="system">
+	<name>AcySMS : MijoShop order update</name>
+	<creationDate>September 2013</creationDate>
+	<version>{__VERSION__}</version>
+	<author>Acyba</author>
+	<authorEmail>dev@acyba.com</authorEmail>
+	<authorUrl>http://www.acyba.com</authorUrl>
+	<copyright>Copyright (C) 2009-2012 ACYBA SARL - All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+	<description>This plugin enables you to send a message on MijoShop order update</description>
+	<files>
+		<filename plugin="acysmsmijoshoporders">acysmsmijoshoporders.php</filename>
+	</files>
+	<params addpath="/components/com_acysms/params">
+		<param name="help" type="help" label="Help" description="Click on the help button to get some help" default="plugin-acysmsvmorders"/>
+		<param name="productId" type="text" default="" label="SMS_CREDITS_PRODUCT_ID" description="Product ID corresponding to the AcySMS credits (Customer Management only)" filter="SAFEHTML" />
+	</params>
+	<config>
+		<fields name="params" addfieldpath="/components/com_acysms/params">
+			<fieldset name="basic">
+				<field name="help" type="help" label="Help" description="Click on the help button to get some help" default="plugin-acysmsvmorders"/>
+				<field name="productId" type="text" default="" label="SMS_CREDITS_PRODUCT_ID" description="Product ID corresponding to the AcySMS credits (Customer Management only)" filter="SAFEHTML" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

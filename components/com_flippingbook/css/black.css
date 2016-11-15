@@ -1,0 +1,103 @@
+﻿/* BOOK LIST TABLE */
+table.fb_book_list_table {
+	border-collapse:separate;
+}
+
+/* BOOK / CATEGORY LIST ITEM */
+td.flippingbook_book_list_item {
+	color: #cccccc;
+	padding: 10px 5px 10px 5px;
+	border: 1px solid #3f3f3f;
+	background: #000000 url(../images/book_list_bg_black.png) 0 0 no-repeat;
+}
+
+/* BOOK / CATEGORY LIST TITLE */
+.fb_contentheading {
+	font-size: 16px;
+	font-weight: bold;
+	color: #cccccc;
+	text-decoration: none;
+	line-height: 20px;
+}
+
+.fb_contentheading:hover {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/* IMAGE IN BOOK / CATEGORY LIST */
+a.flippingbook_book_img {
+	margin: 0px 10px 0px 0px;
+	text-decoration: none;
+	float: left;
+}
+
+/* DESCRIPTION BLOCK BELOW BOOK */
+.fb_bookDescription {
+	color: #cccccc;
+	clear: both;
+	border: 1px solid #3f3f3f;
+	padding: 10px;
+	margin: 0px;
+	background: #000000 url(../images/book_list_bg_black.png) 0 0 no-repeat;
+}
+
+/* PAGES DESCRIPTION */
+.fb_leftPageDescription {
+	color: #cccccc;
+	border: 1px solid #3f3f3f;
+	padding: 10px;
+	background: #000000 url(../images/book_list_bg_black_l.png) 0 0 no-repeat;
+	margin: 0px;
+	display: none;
+/*	If you want to display page descriptions under their pages, uncomment these two strings and specify the block width. */
+/*	width: 250px;
+	float: left; */
+}
+
+.fb_rightPageDescription {
+	color: #cccccc;
+	border: 1px solid #3f3f3f;
+	padding: 10px;
+	margin: 0px;
+	display: none;
+	background: #000000 url(../images/book_list_bg_black_r.png) 100% 0 no-repeat;
+/*	If you want to display page descriptions under their pages, uncomment these two strings and specify the block width. */
+/*	width: 250px;
+	float: right; */
+}
+
+.fb_errorMessage {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	background-color: #c3d2e5;
+	padding: 10px;
+	border-top: 3px solid #84a7db;
+	border-bottom: 3px solid #84a7db;
+	border-left: 0px;
+	border-right: 0px;
+	color: #0055bb;
+}
+#altmsg {
+	padding: 5px 0;
+}
+
+#nav_bar {
+	padding: 20px 0;
+}
+
+#nav_bar a:link, #nav_bar a:visited, #nav_bar a:active {
+	background-color: #eee;
+	color: #000;
+	padding: 2px 4px;
+	text-decoration: none;
+}
+
+#nav_bar a:hover {
+	background-color: #eee;
+	color: #fff;
+}
+
+/* Fix a dotted border around SWF when using Firefox 3 on Windows and wmode transparent or opaque */
+object { outline:none; }

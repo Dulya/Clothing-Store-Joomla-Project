@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="plugin" version="3.0" method="upgrade" group="system">
+	<name>AcySMS : Double optin verification feature</name>
+	<creationDate>August 2014</creationDate>
+	<version>{__VERSION__}</version>
+	<author>Acyba</author>
+	<authorEmail>dev@acyba.com</authorEmail>
+	<authorUrl>http://www.acyba.com</authorUrl>
+	<copyright>Copyright (C) 2009 - 2010 ACYBA SARL - All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+	<description>User Creation plugin for AcySMS</description>
+	<files>
+		<filename plugin="acysmsverifnumber">acysmsverifnumber.php</filename>
+		<filename>acysmsverifnumber.xml</filename>
+	</files>
+</install>

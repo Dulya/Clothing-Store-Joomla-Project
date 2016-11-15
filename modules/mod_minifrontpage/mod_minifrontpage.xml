@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+	<name>Mini Frontpage</name>
+	<author>TemplatePlazza</author>
+	<creationDate>2 Jul 2014</creationDate>
+	<copyright>Copyright (C) 2005 - 2012 Open Source Matters. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@templateplazza.com</authorEmail>
+	<authorUrl>www.templateplazza.com</authorUrl>
+	<version>2.2.3</version>
+	<description>MOD_MINIFRONTPAGE_DESC</description>
+	<files>
+		<filename module="mod_minifrontpage">mod_minifrontpage.php</filename>
+		<folder>themes</folder>
+		<folder>images</folder>
+		<folder>library</folder>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>image.php</filename>
+	</files>
+
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_minifrontpage.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_minifrontpage.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="GENERAL">
+				<field name="theme" type="folderlist" default="default" label="MFP_MODULE_TYPE_LABEL" description="MFP_MODULE_TYPE_DESC" directory="modules/mod_minifrontpage/themes" />
+				<field name="number_of_column" type="text" default="2" label="MFP_NUMCOLUMNS_LABEL" description="MFP_NUMCOLUMNS_DESC"/>
+				<field name="number_of_row" type="text" default="2" label="MFP_NUMROWS_LABEL" description="MFP_NUMCOLUMNS_DESC"/>
+				<field name="number_of_tab" type="text" default="2" label="MFP_NUMTABS_LABEL" description="MFP_NUMTABS_DESC"/>
+				<field name="number_of_article" type="text" default="10" label="MFP_NUMARTICLES_LABEL" description="MFP_NUMARTICLES_DESC"/>
+				<field name="catid" type="category" extension="com_content" multiple="true" size="10" label="MFP_CATEGORY" description="MFPCATEGORY_DESC" >
+					<option value="">JOPTION_ALL_CATEGORIES</option>
+				</field>
+				<field name="order_by" type="list" default="0" label="MFP_ORDERING" description="MFP_ORDERING_DESC">
+					<option value="0">MFP_ORDERING_CREATED</option>
+					<option value="1">MFP_ORDERING_MOSTREAD</option>
+					<option value="2">MFP_ORDERING_ORDERING</option>
+					<option value="3">MFP_ORDERING_MODIFIED</option>
+					<option value="4">MFP_ORDERING_RANDOM</option>
+				</field>
+				<field name="order_type" type="radio" default="1" label="MFP_ORDERING_TYPE" description="MFP_ORDERING_TYPE_DESC">
+					<option value="0">MFP_ORDERING_TYPE_ASC</option>
+					<option value="1">MFP_ORDERING_TYPE_DES</option>
+				</field>
+
+				<field name="period" type="text" default="1200" label="MFP_PERIOD_LABEL" description="MFP_PERIOD_DESC"/>
+				<field name="number_of_skip" type="text" default="0" label="MFP_SKIP_LABEL" description="MFP_SKIP_DESC" />
+
+
+
+				<field name="item_direction" type="list" default="across" label="MFP_ITEMDIRECTION_LABEL" description="MFP_ITEMDIRECTION_DESC">
+					<option value="across">MFP_DIRECTION_ACROSS</option>
+					<option value="down">MFP_DIRECTION_DOWN</option>
+				</field>
+
+
+
+				<field name="limit_intro" type="text" default="100" label="MFP_LIMITINTRO_LABEL" description="MFP_LIMITINTRO_DESC"/>
+				<field name="fulllink" type="text" default="" label="MFP_FULLSTORY_LABEL" description="MFP_FULLSTORY_DESC"/>
+
+				<field name="show_featured" type="list" default="1" label="MFP_SHOWFEATURED_LABEL" description="MFP_SHOWFEATURED_DESC">
+					<option value="0">JHIDE</option>
+					<option value="1">JSHOW</option>
+					<option value="2">MFP_ONLYSHOWFEATURED_OPTION</option>
+				</field>
+
+				<field name="user_id" type="list" default="0" label="MFP_USER_LABEL" description="MFP_USER_DESC">
+					<option value="0">MFP_VALUE_ANYONE</option>
+					<option value="by_me">MFP_VALUE_ADDED_BY_ME</option>
+					<option value="not_me">MFP_VALUE_NOTADDED_BY_ME</option>
+				</field>
+
+				<field name="show_author" type="radio" default="1" label="MFP_AUTHOR_LABEL" description="MFP_AUTHOR_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="show_author_type" type="radio" default="0" label="MFP_AUTHORTYPE_LABEL" description="MFP_AUTHORTYPE_DESC">
+					<option value="0">MFP_VALUE_NAME</option>
+					<option value="1">MFP_VALUE_ALIAS</option>
+				</field>
+				<field name="cat_title" type="radio" default="0" label="MFP_CATEGTITLE_LABEL" description="MFP_CATEGTITLE_DESC">
+						<option value="0">JHIDE</option>
+						<option value="1">JSHOW</option>
+				</field>
+				<field name="trim_category_title" type="text" default="50" label="MFP_TRIMCATEGORYTITLE_LABEL" description="MFP_TRIMCATEGORYTITLE_DESC"/>
+				<field name="show_title" type="radio" default="1" label="MFP_ARTICLETITLE_LABEL" description="MFP_ARTICLETITLE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="title_link" type="radio" default="1" label="MFP_ARTICLETITLELINK_LABEL" description="MFP_ARTICLETITLELINK_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="trim_article_title" type="text" default="50" label="MFP_TRIMARTICLETITLE_LABEL" description="MFP_TRIMARTICLETITLE_DESC"/>
+				<field name="show_date" type="radio" default="1" label="MFP_ARTICLEDATE_LABEL" description="MFP_ARTICLEDATE_DESC">
+					<option value="0">JHIDE</option>
+					<option value="1">JSHOW</option>
+				</field>
+				<field name="date_type" type="list" default="0" label="MFP_DATE_TYPE_LABEL" description="MFP_DATE_TYPE_DESC">
+					<option value="0">MFP_DATE_VALUE_CREATED</option>
+					<option value="1">MFP_DATE_VALUE_MODIFIED</option>
+					<option value="2">MFP_DATE_VALUE_PUBLISHUP</option>
+				</field>
+				<field name="date_format" type="text" default="d M Y H:i" label="MFP_DATEFORMAT_LABEL" description="MFP_DATEFORMAT_DESC"/>
+				<field name="header_title_links" type="text" default="Other Articles" label="MFP_OTHER_ARTICLES_LABEL" description="MFP_OTHER_ARTICLES_DESC">
+				</field>
+				<field name="more_article_placement" type="list" default="bottom" label="MFP_MOREARTICLEPLACEMENT_LABEL" description="MFP_MOREARTICLEPLACEMENT_DESC">
+					<option value="bottom">MFP_MOREARTICLEPLACEMENT_BOTTOM</option>
+					<option value="lastcolumn">MFP_MOREARTICLEPLACEMENT_LASTCOLUMN</option>
+					<option value="lastcell">MFP_MOREARTICLEPLACEMENT_LASTCELL</option>
+				</field>
+				<field name="thumb_embed" type="radio" default="1" label="MFP_SHOWTHUMBS_LABEL" description="MFP_SHOWTHUMBS_DESC">
+					<option value="0">JHIDE</option>
+					<option value="1">JSHOW</option>
+				</field>
+				<field name="thumb_align" type="radio" default="0" label="MFP_THUMBALIGN_LABEL" description="MFP_THUMBALIGN_DESC">
+						<option value="0">MFP_VALUE_LEFT</option>
+						<option value="1">MFP_VALUE_RIGHT</option>
+				</field>
+				<field name="thumb_width" type="text" default="48" label="MFP_THUMBWIDTH_LABEL" description="MFP_THUMBWIDTH_DESC"/>
+				<field name="thumb_height" type="text" default="48" label="MFP_THUMBHEIGHT_LABEL" description="MFP_THUMBHEIGHT_DESC"/>
+
+				<field name="aspect" type="radio" default="0" label="MFP_PRESERVEASPECT_LABEL" description="MFP_PRESERVEASPECT_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="thumbnail_position" type="list" default="0" label="MFP_THUMBNAILPOS_LABEL" description="MFP_THUMBNAILPOS_DESC">
+						<option value="1">MFP_VALUE_BEFORETC</option>
+						<option value="0">MFP_VALUE_AFTERTD</option>
+				</field>
+			</fieldset>
+
+			<fieldset name="advanced">
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+
+		</fields>
+	</config>
+</extension>

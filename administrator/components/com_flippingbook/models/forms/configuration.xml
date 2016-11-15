@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="component_settings" label="COM_FLIPPINGBOOK_COMPONENT_SETTINGS">
+		<field name="theme" type="modal_themes_files"
+			description="COM_FLIPPINGBOOK_THEME_DESC"
+			label="COM_FLIPPINGBOOK_THEME" />
+			
+		<field id="preloaderType" name="preloaderType" type="list"
+			label="COM_FLIPPINGBOOK_PRELOADER_TYPE" description="COM_FLIPPINGBOOK_PRELOADER_TYPE_DESC"
+			class="inputbox" size="1" default="Progress Bar" >
+			<option value="">
+				COM_FLIPPINGBOOK_NONE</option>
+			<option value="Progress Bar">
+				COM_FLIPPINGBOOK_PROGRESS_BAR</option>
+			<option value="Round">
+				COM_FLIPPINGBOOK_ROUND</option>
+			<option value="Gradient Wheel">
+				COM_FLIPPINGBOOK_GRADIENT_WHEEL</option>
+			<option value="Gear Wheel">
+				COM_FLIPPINGBOOK_GEAR_WHEEL</option>
+			<option value="Line">
+				COM_FLIPPINGBOOK_LINE</option>
+			<option value="Animated Book">
+				COM_FLIPPINGBOOK_ANIMATED_BOOK</option>
+		</field>	
+			
+		<field name="flipSound" type="modal_page_flip_sound"
+			description="COM_FLIPPINGBOOK_PAGE_FLIP_SOUND_DESC"
+			label="COM_FLIPPINGBOOK_PAGE_FLIP_SOUND" />
+			
+		<field name="hardcoverSound" type="modal_hardcover_sound"
+			description="COM_FLIPPINGBOOK_HARDCOVER_FLIP_SOUND_DESC"
+			label="COM_FLIPPINGBOOK_HARDCOVER_FLIP_SOUND" />
+			
+ 		<field name="rigidPageSpeed" type="rigidPageSpeed"
+			label="COM_FLIPPINGBOOK_HARDCOVER_PAGE_FLIP_SPEED" description="COM_FLIPPINGBOOK_HARDCOVER_PAGE_FLIP_SPEED_DESC"
+			class="inputbox" size="30" default="5" />
+			
+ 		<field name="moveSpeed" type="moveSpeed"
+			label="COM_FLIPPINGBOOK_MOVE_SPEED" description="COM_FLIPPINGBOOK_MOVE_SPEED_DESC"
+			class="inputbox" size="30" default="2" />
+			
+ 		<field name="closeSpeed" type="closeSpeed"
+			label="COM_FLIPPINGBOOK_FLIP_SPEED" description="COM_FLIPPINGBOOK_FLIP_SPEED_DESC"
+			class="inputbox" size="30" default="3" />
+			
+ 		<field name="gotoSpeed" type="gotoSpeed"
+			label="COM_FLIPPINGBOOK_GO_TO_SPEED" description="COM_FLIPPINGBOOK_GO_TO_SPEED_DESC"
+			class="inputbox" size="30" default="3" />
+		
+		<field name="zoomOnClick"
+				type="radio"
+				class="btn-group"
+				description="COM_FLIPPINGBOOK_ZOOM_ON_DOUBLE_CLICK_DESC"
+				label="COM_FLIPPINGBOOK_ZOOM_ON_DOUBLE_CLICK"
+				labelclass="control-label"
+				default="1"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+		
+		<field name="dropShadowEnabled"
+				type="radio"
+				class="btn-group"
+				description="COM_FLIPPINGBOOK_DROP_SHADOW_DESC"
+				label="COM_FLIPPINGBOOK_DROP_SHADOW"
+				labelclass="control-label"
+				default="1"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+	</fieldset>
+	
+	<fieldset name="categories_list_settings" label="COM_FLIPPINGBOOK_CATEGORIES_LIST_SETTINGS">
+		<field name="categoryListTitle" type="categoryListTitle"
+			label="COM_FLIPPINGBOOK_CATEGORY_LIST_TITLE" description="COM_FLIPPINGBOOK_CATEGORY_LIST_TITLE_DESC"
+			class="inputbox" size="30" />
+		
+		<field id="columns" name="columns" type="list"
+			label="COM_FLIPPINGBOOK_NUMBER_OF_COLUMNS" description="COM_FLIPPINGBOOK_NUMBER_OF_COLUMNS_DESC"
+			class="inputbox" size="1" default="2" >
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+		</field>
+		
+		<field name="printIcon"
+				type="radio"
+				class="btn-group"
+				description="COM_FLIPPINGBOOK_PRINT_ICON_DESC"
+				label="COM_FLIPPINGBOOK_PRINT_ICON"
+				labelclass="control-label"
+				default="1"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+		
+		<field name="emailIcon"
+				type="radio"
+				class="btn-group"
+				description="COM_FLIPPINGBOOK_EMAIL_ICON_DESC"
+				label="COM_FLIPPINGBOOK_EMAIL_ICON"
+				labelclass="control-label"
+				default="1"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+	</fieldset>
+</form>

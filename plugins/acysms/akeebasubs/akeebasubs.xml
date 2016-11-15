@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<extension type="plugin" version="2.5" method="upgrade" group="acysms">
+	<name>AcySMS : Akeeba Subscriptions</name>
+	<creationDate>September 2013</creationDate>
+	<version>{__VERSION__}</version>
+	<author>Acyba</author>
+	<authorEmail>dev@acyba.com</authorEmail>
+	<authorUrl>http://www.acyba.com</authorUrl>
+	<copyright>Copyright (C) 2009-2012 ACYBA SARL - All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+	<description>This plugin enables you to select Akeeba Subscriptions Level for sending your SMS</description>
+	<files>
+		<filename plugin="akeebasubs">akeebasubs.php</filename>
+	</files>
+	<params addpath="/components/com_acysms/params">
+		<param name="help" type="help" label="Help" description="Click on the help button to get some help" default="plugin-acymailing"/>
+		<param name="displayToCustomers" type="radio" default="1" label="SMS_DISPLAY_TO_CUSTOMERS" description="Display the filters to the customers">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+	</params>
+	<config>
+		<fields name="params" addfieldpath="/components/com_acysms/params">
+			<fieldset name="basic">
+				<field name="help" type="help" label="Help" description="Click on the help button to get some help" default="plugin-acymailing"/>
+				<field name="displayToCustomers" type="radio" default="1" label="SMS_DISPLAY_TO_CUSTOMERS" description="Display the filters to the customers">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

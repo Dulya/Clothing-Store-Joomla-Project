@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Front-end answer management">
+		<message>Access the front-end answer management</message>
+	</layout>
+	<state>
+		<name>Front-end answer management</name>
+	</state>
+</metadata>

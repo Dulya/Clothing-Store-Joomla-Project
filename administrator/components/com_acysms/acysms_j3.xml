@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<extension type="component" version="3.0" method="upgrade">
+	<name>AcySMS</name>
+	<creationDate>août 2016</creationDate>
+	<version>3.1.0</version>
+	<level>express</level>
+	<author>Acyba</author>
+	<authorEmail>dev@acyba.com</authorEmail>
+	<authorUrl>http://www.acyba.com</authorUrl>
+	<copyright>Copyright (C) 2009-2016 ACYBA SARL - All rights reserved.</copyright>
+	<description>Handle SMS campaigns</description>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+	<languages folder="language">
+		<language tag="ar-AA">ar-AA.com_acysms.ini</language>
+		<language tag="da-DK">da-DK.com_acysms.ini</language>
+		<language tag="de-DE">de-DE.com_acysms.ini</language>
+		<language tag="en-GB">en-GB.com_acysms.ini</language>
+		<language tag="es-ES">es-ES.com_acysms.ini</language>
+		<language tag="fr-FR">fr-FR.com_acysms.ini</language>
+		<language tag="it-IT">it-IT.com_acysms.ini</language>
+		<language tag="nb-NO">nb-NO.com_acysms.ini</language>
+		<language tag="pl-PL">pl-PL.com_acysms.ini</language>
+		<language tag="ru-RU">ru-RU.com_acysms.ini</language>
+	</languages>
+	<install>
+		<sql>
+			<file driver="mysql">tables.sql</file>
+			<file driver="mysql" charset="utf8">tables.sql</file>
+			<file driver="mysqli">tables.sql</file>
+			<file driver="mysqli" charset="utf8">tables.sql</file>
+		</sql>
+	</install>
+	<scriptfile>install.acysms.php</scriptfile>
+	<files folder="front">
+		<folder>controllers</folder>
+		<folder>params</folder>
+		<folder>sef_ext</folder>
+		<folder>views</folder>
+		<filename>acysms.php</filename>
+		<filename>index.html</filename>
+		<filename>router.php</filename>
+	</files>
+	<media folder="media" destination="com_acysms">
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>logs</folder>
+		<folder>js</folder>
+		<filename>index.html</filename>
+	</media>
+	<administration>
+		<files folder="back">
+			<folder>buttons</folder>
+			<folder>classes</folder>
+			<folder>controllers</folder>
+			<folder>extensions</folder>
+			<folder>gateway</folder>
+			<folder>compat</folder>
+			<folder>helpers</folder>
+			<folder>integration</folder>
+			<folder>types</folder>
+			<folder>views</folder>
+			<filename>acysms.php</filename>
+			<filename>index.html</filename>
+			<filename>tables.sql</filename>
+			<filename>config.xml</filename>
+		</files>
+		<menu img="../media/com_acysms/images/icons/16_acysms.png" link="option=com_acysms">AcySMS</menu>
+		<submenu>
+			<menu link="option=com_acysms&amp;ctrl=receiver" img="../media/com_acysms/images/icons/16_receiver.png">Receivers</menu>
+			<menu link="option=com_acysms&amp;ctrl=group" img="../media/com_acysms/images/icons/16_group.png">Groups</menu>
+			<menu link="option=com_acysms&amp;ctrl=message" img="../media/com_acysms/images/icons/16_message.png">Messages</menu>
+			<menu link="option=com_acysms&amp;ctrl=answer" img="../media/com_acysms/images/icons/16_answer.png">Answers</menu>
+			<menu link="option=com_acysms&amp;ctrl=category" img="../media/com_acysms/images/icons/16_categories.png">Categories</menu>
+			<menu link="option=com_acysms&amp;ctrl=queue" img="../media/com_acysms/images/icons/16_queue.png">Queue</menu>
+			<menu link="option=com_acysms&amp;ctrl=stats" img="../media/com_acysms/images/icons/16_stat.png">Stats</menu>
+			<menu link="option=com_acysms&amp;ctrl=senderprofile" img="../media/com_acysms/images/icons/16_sender.png">Sender_Profiles</menu>
+			<menu link="option=com_acysms&amp;ctrl=cpanel" img="../media/com_acysms/images/icons/16_config.png">Configuration</menu>
+		</submenu>
+	</administration>
+</extension>

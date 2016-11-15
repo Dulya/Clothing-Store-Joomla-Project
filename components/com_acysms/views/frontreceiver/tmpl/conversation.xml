@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Front-end conversation interface">
+		<message>This menu gives you direct access to the front-end user conversation page</message>
+	</layout>
+	<state>
+		<name>Conversation</name>
+	</state>
+	<fields name="params" addfieldpath="/components/com_acysms/params">
+	</fields>
+</metadata>

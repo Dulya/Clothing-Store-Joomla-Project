@@ -1,0 +1,66 @@
+a.folder_row {
+	padding: 0px 0px 0px 25px;
+	background-image: url(../images/folder.png);
+	background-repeat: no-repeat;
+	background-position: 5px center;
+}
+
+td.folder_td {
+	font-size:150%;
+}
+
+a.fb_button, input.saveButton {
+	font-size: 150%;
+	padding: 5px 10px 5px 30px;
+	margin: 10px 10px 10px 0px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: 5px center;
+	background-color: #FFF;
+	border: 1px solid #CCC;
+	line-height: 22px;
+}
+
+input.fb_select_file {
+	font-size:150%;
+	padding: 5px 10px 5px 5px;
+	margin: 10px 10px 10px 0px;
+	border: 1px solid #CCC;
+	width: 100%;
+}
+
+input.fb_rename_field {
+	font-size:150%;
+	padding: 5px 10px 5px 5px;
+	margin: 10px 10px 10px 0px;
+	border: 1px solid #CCC;
+	width: 300px;
+}
+
+#saveButton {
+	background-image: url(../images/save.png);
+}
+
+#cancelButton {
+	background-image: url(../images/cancel.png);
+}
+
+#new_folder_link {
+	background-image: url(../images/new_folder.png);
+}
+
+#uploadButton {
+	background-image: url(../images/upload_btn.png);
+}
+
+#upload_files_link {
+	background-image: url(../images/upload.png);
+}
+
+#fb_current_folder {
+	margin: 10px 0px;
+	padding: 5px 10px;
+	color: #666;
+	background-color: #FFF;
+	font-weight: bold;
+}

@@ -1,0 +1,73 @@
+/**
+ * @package    AcySMS for Joomla!
+ * @version    3.1.0
+ * @author     acyba.com
+ * @copyright  (C) 2009-2016 ACYBA S.A.R.L. All rights reserved.
+ * @license	GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+ */
+
+div.acysms_module, .acysms_module div{
+	padding: 0 !important;
+	margin: 0 !important;
+	border-style:none !important;
+}
+
+table.acysms_form{
+	margin:auto;
+	border:0px !important;
+}
+
+a.acysms_togglemodule{
+	display : block;
+	font-size:16px;
+}
+
+.acysms_mootoolsbutton p{
+	text-align:center;
+}
+
+.acysubbuttons{
+	text-align:center;
+}
+
+img.captchaimagemodule{
+	border:1px solid #dddddd;
+	float: left;
+}
+
+.captchakeymodule .captchafield{
+	margin-top:3px;
+	margin-left:2px;
+}
+
+.acysms_fulldiv tr, .acysms_fulldiv td{
+	border:0px;
+}
+
+.acysms_module_form td {
+	padding-bottom: 5px;
+	vertical-align:top;
+}
+
+div.acysms_module_error {
+	color: #400;
+	background-color: #fdd;
+	padding: 1em !important;
+	margin-bottom:10px;
+}
+
+div.acysms_module_success {
+	color: #130;
+	background-color: #dfc;
+	padding: 1em !important;
+	z-index: 10;
+	margin-bottom:10px;
+}
+
+.acysms_module_form .acysms_introtext{
+	 padding-bottom:10px;
+	 display:block;
+}
+.acysms_module select, .acysms_module input {
+	margin: 2px ;
+}

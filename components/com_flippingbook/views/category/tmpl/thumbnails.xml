@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="com_flippingbook_category_thumbnails_layout">
+		<help
+			key = "JHELP_MENUS_MENU_ITEM_FLIPPINGBOOK_CATEGORY_THUMBNAILS_LAYOUT"
+		/>
+		<message>
+			<![CDATA[com_flippingbook_category_thumbnails_layout_desc]]>
+		</message>
+	</layout>
+	
+	<fields name="request">
+		<fieldset name="request"
+			addfieldpath="/administrator/components/com_flippingbook/models/fields">
+			
+			<field name="id" type="modal_category_for_menu_system"
+				description="COM_FLIPPINGBOOK_SELECT_CATEGORY_DESC"
+				label="COM_FLIPPINGBOOK_SELECT_CATEGORY_LABEL"
+				required="true" />
+			
+		</fieldset>
+	</fields>
+</metadata>

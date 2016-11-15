@@ -1,0 +1,82 @@
+﻿/* BOOK LIST TABLE */
+table.fb_book_list_table {
+	border-collapse:separate;
+}
+
+/* BOOK / CATEGORY LIST ITEM */
+td.flippingbook_book_list_item {
+	padding: 10px 5px 10px 5px;
+}
+
+/* BOOK / CATEGORY LIST TITLE */
+.fb_contentheading {
+	font-size: 120%;
+	font-weight: bold;
+}
+
+.fb_contentheading:hover {
+}
+
+/* IMAGE IN BOOK / CATEGORY LIST */
+a.flippingbook_book_img {
+	margin: 0px 10px 0px 0px;
+	text-decoration: none;
+	float: left;
+}
+
+/* DESCRIPTION BLOCK BELOW BOOK */
+.fb_bookDescription {
+	clear: both;
+	padding: 5px 0px 5px 0px;
+	margin: 0px;
+}
+
+/* PAGES DESCRIPTION */
+.fb_leftPageDescription {
+	padding: 5px 0px 5px 0px;
+	margin: 0px;
+	display: none;
+/*	If you want to display page descriptions under their pages, uncomment these two strings and specify the block width. */
+/*	width: 225px;
+	float: right;*/
+}
+
+.fb_rightPageDescription {
+	padding: 5px 0px 5px 0px;
+	margin: 0px;
+	display: none;
+/*	If you want to display page descriptions under their pages, uncomment these two strings and specify the block width. */
+/*	width: 225px;
+	float: left; */
+}
+
+.fb_errorMessage {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	background-color: #c3d2e5;
+	padding: 10px;
+	border-top: 3px solid #84a7db;
+	border-bottom: 3px solid #84a7db;
+	border-left: 0px;
+	border-right: 0px;
+	color: #0055bb;
+}
+
+#altmsg {
+	padding: 5px 0;
+}
+
+#nav_bar {
+	padding: 20px 0;
+}
+
+#nav_bar a:link, #nav_bar a:visited, #nav_bar a:active {
+	padding: 2px 4px;
+	text-decoration: none;
+}
+
+#nav_bar a:hover { }
+
+/* Fix a dotted border around SWF when using Firefox 3 on Windows and wmode transparent or opaque */
+object { outline:none; }

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Front-end group management">
+		<message>Access the front-end group management</message>
+	</layout>
+	<state>
+		<name>Front-end group management</name>
+	</state>
+</metadata>

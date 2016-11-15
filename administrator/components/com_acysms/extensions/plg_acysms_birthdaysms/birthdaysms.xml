@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://dev.joomla.org/xml/1.5/plugin-install.dtd">
+<install type="plugin" version="1.5" method="upgrade" group="acysms">
+	<name>AcySMS : Birthday feature</name>
+	<creationDate>July 2013</creationDate>
+	<version>{__VERSION__}</version>
+	<author>Acyba</author>
+	<authorEmail>dev@acyba.com</authorEmail>
+	<authorUrl>http://www.acyba.com</authorUrl>
+	<copyright>Copyright (C) 2009-2012 ACYBA SARL - All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+	<description>Birthday plugin for AcySMS</description>
+	<files>
+		<filename plugin="birthdaysms">birthdaysms.php</filename>
+	</files>
+	<params addpath="/components/com_acysms/params">
+		<param name="help" type="help" label="Help" description="Click on the help button to get some help" default="birthdaysms"/>
+		<param name="acysms" type="testplug" label="Test" description="Click on the test button to test your plugin. Please save your plugin first otherwise the configuration will not be applied" default="birthdaysms"/>
+	</params>
+	<config>
+		<fields name="params" addfieldpath="/components/com_acysms/params">
+			<fieldset name="basic">
+				<field name="help" type="help" label="Help" description="Click on the help button to get some help" default="birthdaysms"/>
+				<field name="acysms" type="testplug" label="Test" description="Click on the test button to test your plugin. Please save your plugin first otherwise the configuration will not be applied" default="birthdaysms"/>
+			</fieldset>
+		</fields>
+	</config>
+</install>

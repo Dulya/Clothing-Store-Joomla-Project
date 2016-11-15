@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="install">
+	<name>Responsive CSS3 Slider</name>
+	<author>F9 tech</author>
+	<creationDate>January 24,2013</creationDate>
+	<copyright>Copyright @ Joomla Drive</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>developer@f9tech.com</authorEmail>
+	<authorUrl>http://joomladrive.com</authorUrl>
+	<version>3.1</version>
+	<description>
+		<![CDATA[
+		<style>
+			h3{
+				color: green;
+			}
+			.panelform .adminformlist .hasTip{
+				color: green;
+				font-weight: bold;
+			}
+		</style>
+		<div>
+			<h3>Responsive Slider With html5,css3</h3>			
+			<br/>
+			<p>Helps to slide your images with cool effect.</p>
+				<h3>Features</h3>
+				<ul>
+					<li>Compatibility with Joomla2.5 and Joomla 3.0</li>
+					<li>Easy and friendly back-end administration.</li>
+					<li>Responsive Image Slider.</li>
+					<li>Developed in HTML5,CSS3 only.</li>
+					<li>Developed without Javascript.</li>
+					<li>Loads very faster than other sliders.</li>
+				</ul>
+				<h3>About Slider</h3>	
+				Copyright 2013 &copy; <a target="_blank" href="http://joomladrive.com">http://joomladrive.com</a>	
+		</div>]]>
+	</description>
+	<files>
+		<filename module="mod_responsive_css3_slider">mod_responsive_css3_slider.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_responsive_css3_slider.xml</filename>
+		<folder>css/</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="source" type="text" description="Enter your Folder Name" label="Source Directory" default="images/headers"/>
+				<field name="effect" type="list" default="ease" label="Animation Type" description="Select Animation Type">
+					<option value="ease">Ease</option>
+					<option value="step-end">Step-end</option>
+				</field>
+				<field name="autoplay" type="radio" default="1" label="Auto play" description="Select Auto play">
+					<option	value="1">Yes</option>
+					<option	value="0">No</option>
+				</field>
+				<field name="mouseover" type="radio" default="0" label="On Mouse Over" description="On Mouse Over">
+					<option	value="1">Play</option>
+					<option	value="0">Pause</option>
+				</field>
+				<field name="duration" type="text" description="Enter the duration in seconds" label="Duration" default="15s"/>
+			</fieldset>		
+		</fields>
+	</config>
+</extension>

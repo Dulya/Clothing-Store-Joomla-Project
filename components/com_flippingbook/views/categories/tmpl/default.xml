@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="com_flippingbook_categories_blog_layout">
+		<help
+			key = "JHELP_MENUS_MENU_ITEM_FLIPPINGBOOK_CATEGORIES_BLOG_LAYOUT"
+		/>
+		<message>
+			<![CDATA[com_flippingbook_categories_blog_layout_desc]]>
+		</message>
+	</layout>
+</metadata>

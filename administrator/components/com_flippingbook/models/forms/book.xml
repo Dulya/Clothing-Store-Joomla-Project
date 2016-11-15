@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="book_edit" label="COM_FLIPPINGBOOK_EDIT_BOOK">
+
+		<field name="title" type="title"
+			label="COM_FLIPPINGBOOK_TITLE"
+			class="inputbox" size="30" required="true" 
+			default="New Book" />
+			
+		<field name="alias" type="text" label="JFIELD_ALIAS_LABEL"
+			description="JFIELD_ALIAS_DESC" class="inputbox" size="30" />
+			
+		<field name="category_id" type="modal_category"
+			description="JFIELD_CATEGORY_DESC"
+			label="JCATEGORY" />
+		
+		<field id="state" name="state" type="list"
+			label="JGLOBAL_STATE" description="JFIELD_PUBLISHED_DESC"
+			class="inputbox" size="1" 
+			default="1" >
+			<option value="1">
+				JPUBLISHED</option>
+			<option value="0">
+				JUNPUBLISHED</option>
+			<option value="2">
+				JARCHIVED</option>
+			<option value="-2">
+				JTRASHED</option>
+		</field>
+		
+		<field name="ordering" type="text" label="JFIELD_ORDERING_LABEL"
+			description="JFIELD_ORDERING_DESC" class="inputbox" size="6"
+			default="0" />
+			
+		<field name="description" type="editor"
+			label="COM_FLIPPINGBOOK_FIELD_DESCRIPTION"
+			description="COM_FLIPPINGBOOK_FIELD_DESCRIPTION_DESC"
+			class="inputbox" filter="safehtml"
+			buttons="true"
+			hide="readmore,pagebreak"
+			size="30" />
+			
+		<field
+				name="preview_image"
+				type="media"
+				label="COM_FLIPPINGBOOK_PREVIEW_IMAGE"
+				description="COM_FLIPPINGBOOK_PREVIEW_IMAGE_DESC" />
+
+		<field name="access" type="accesslevel" label="COM_FLIPPINGBOOK_ACCESS"
+			description="COM_FLIPPINGBOOK_ACCESS_DESC" class="inputbox" size="1" />
+			
+		<field name="created" type="calendar" label="COM_FLIPPINGBOOK_CREATED"
+			description="COM_FLIPPINGBOOK_CREATED_DESC" class="inputbox" size="20"
+			format="%Y-%m-%d %H:%M:%S" filter="user_utc" />
+			
+		<field name="modified" type="calendar" class="readonly"
+			label="COM_FLIPPINGBOOK_MODIFIED" description="COM_FLIPPINGBOOK_MODIFIED_DESC"
+			size="20" readonly="true" format="%Y-%m-%d %H:%M:%S" filter="user_utc" />
+			
+		<field name="hits" type="text" label="COM_FLIPPINGBOOK_HITS"
+			description="COM_FLIPPINGBOOK_HITS_DESC" size="10" default="0"
+			readonly="true" class="readonly" />
+			
+		<field name="id"  type="text" class="readonly" label="COM_FLIPPINGBOOK_ID"
+			description ="COM_FLIPPINGBOOK_ID_DESC" size="10" default="0" 
+			readonly="true"  />
+			
+		<field name="language" type="hidden"  label="COM_FLIPPINGBOOK_LANGUAGE"
+			description="COM_FLIPPINGBOOK_LANGUAGE_DESC" class="inputbox">
+			<option value="*">JALL</option>
+		</field>
+			
+		<field name="created_by" type="hidden" 
+			label="COM_FLIPPINGBOOK_CREATED_BY" description="COM_FLIPPINGBOOK_CREATED_BY_DESC" />
+
+		<field name="created_by_alias" type="hidden" 
+			label="COM_FLIPPINGBOOK_CREATED_BY_ALIAS" description="COM_FLIPPINGBOOK_CREATED_BY_ALIAS_DESC"
+			class="inputbox" size="20" />
+	</fieldset>
+	
+	<fieldset name="book_parameters" label="COM_FLIPPINGBOOK_BOOK_PARAMETERS">
+		<field name="show_book_title"
+				type="radio"
+				class="btn-group"
+				description="COM_FLIPPINGBOOK_SHOW_BOOK_TITLE_DESC"
+				label="COM_FLIPPINGBOOK_SHOW_BOOK_TITLE"
+				labelclass="control-label"
+				default="1"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			
+		<field name="show_book_description"
+				type="radio"
+				class="btn-group"
+				description="COM_FLIPPINGBOOK_SHOW_BOOK_DESCRIPTION_DESC"
+				label="COM_FLIPPINGBOOK_SHOW_BOOK_DESCRIPTION"
+				labelclass="control-label"
+				default="1"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			
+		<field name="show_pages_description"
+				type="radio"
+				class="btn-group"
+				description="COM_FLIPPINGBOOK_SHOW_PAGES_DESCRIPTIONS_DESC"
+				label="COM_FLIPPINGBOOK_SHOW_PAGES_DESCRIPTIONS"
+				labelclass="control-label"
+				default="1"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			
+		<field name="printIcon"
+				type="radio"
+				class="btn-group"
+				description="COM_FLIPPINGBOOK_PRINT_ICON_DESC"
+				label="COM_FLIPPINGBOOK_PRINT_ICON"
+				labelclass="control-label"
+				default="1"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			
+		<field name="emailIcon"
+				type="radio"
+				class="btn-group"
+				description="COM_FLIPPINGBOOK_EMAIL_ICON_DESC"
+				label="COM_FLIPPINGBOOK_EMAIL_ICON"
+				labelclass="control-label"
+				default="1"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+		
+		<field name="book_width" type="text" 
+			label="COM_FLIPPINGBOOK_PAGES_WIDTH"
+			description="COM_FLIPPINGBOOK_PAGES_WIDTH_DESC" class="inputbox" size="30"
+			default="300" />
+		
+		<field name="book_height" type="text" 
+			label="COM_FLIPPINGBOOK_PAGES_HEIGHT"
+			description="COM_FLIPPINGBOOK_PAGES_HEIGHT_DESC" class="inputbox" size="30" 
+			default="400" />
+			
+		<field name="dynamic_scaling"
+				type="radio"
+				class="btn-group"
+				description="COM_FLIPPINGBOOK_DYNAMIC_SCALING_DESC"
+				label="COM_FLIPPINGBOOK_DYNAMIC_SCALING"
+				labelclass="control-label"
+				default="1"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+		
+		<field name="book_size" type="text" 
+			label="COM_FLIPPINGBOOK_BOOK_SIZE"
+			description="COM_FLIPPINGBOOK_BOOK_SIZE_DESC" class="inputbox" size="30" 
+			default="90" />
+		
+		<field name="flash_width" type="text" 
+			label="COM_FLIPPINGBOOK_FLASH_OBJECT_WIDTH"
+			description="COM_FLIPPINGBOOK_FLASH_OBJECT_WIDTH_DESC" class="inputbox" size="30" 
+			default="100%" />
+		
+		<field name="flash_height" type="text" 
+			label="COM_FLIPPINGBOOK_FLASH_OBJECT_HEIGHT"
+			description="COM_FLIPPINGBOOK_FLASH_OBJECT_HEIGHT_DESC" class="inputbox" size="30" 
+			default="500" />
+			
+		<field name="hardcover"
+				type="radio"
+				class="btn-group"
+				description="COM_FLIPPINGBOOK_HARDCOVER_DESC"
+				label="COM_FLIPPINGBOOK_HARDCOVER"
+				labelclass="control-label"
+				default="0"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			
+		<field id="direction" name="direction" type="list"
+			label="COM_FLIPPINGBOOK_DIRECTION" description="COM_FLIPPINGBOOK_DIRECTION_DESC"
+			class="inputbox" size="1" 
+			default="LTR" >
+			<option value="LTR">COM_FLIPPINGBOOK_LEFT_TO_RIGHT</option>
+			<option value="RTL">COM_FLIPPINGBOOK_RIGHT_TO_LEFT</option>
+		</field>
+	</fieldset>
+	
+	<fieldset name="advanced_parameters" label="COM_FLIPPINGBOOK_BOOK_PARAMETERS">		
+		<field name="center_book"
+				type="radio"
+				class="btn-group"
+				description="COM_FLIPPINGBOOK_CENTERING_BOOK_DESC"
+				label="COM_FLIPPINGBOOK_CENTERING_BOOK"
+				labelclass="control-label"
+				default="1"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+		
+		<field name="scale_content"
+				type="radio"
+				class="btn-group"
+				description="COM_FLIPPINGBOOK_SCALE_CONTENT_DESC"
+				label="COM_FLIPPINGBOOK_SCALE_CONTENT"
+				labelclass="control-label"
+				default="1"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+		
+		<field name="always_opened"
+				type="radio"
+				class="btn-group"
+				description="COM_FLIPPINGBOOK_ALWAYS_OPENED_DESC"
+				label="COM_FLIPPINGBOOK_ALWAYS_OPENED"
+				labelclass="control-label"
+				default="0"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+		
+		<field name="transparent_pages"
+				type="radio"
+				class="btn-group"
+				description="COM_FLIPPINGBOOK_TRANSPARENT_PAGES_DESC"
+				label="COM_FLIPPINGBOOK_TRANSPARENT_PAGES"
+				labelclass="control-label"
+				default="0"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+		
+		<field name="frame_width" type="text" 
+			label="COM_FLIPPINGBOOK_FRAME_WIDTH"
+			description="COM_FLIPPINGBOOK_FRAME_WIDTH_DESC" class="inputbox" size="30" 
+			default="0" />
+		
+		<field name="frame_color" type="text" 
+			label="COM_FLIPPINGBOOK_FRAME_COLOR"
+			description="COM_FLIPPINGBOOK_FRAME_COLOR_DESC" class="inputbox" size="30"
+			default="FFFFFF" />
+		
+		<field name="fullscreen_hint" type="text" 
+			label="COM_FLIPPINGBOOK_FULLSCREEN_HINT"
+			description="COM_FLIPPINGBOOK_FULLSCREEN_HINT_DESC" class="inputbox" size="30" 
+			default="" />
+		
+		<field name="first_page" type="text" 
+			label="COM_FLIPPINGBOOK_NUMBER_OF_START_PAGE"
+			description="COM_FLIPPINGBOOK_NUMBER_OF_START_PAGE_DESC" class="inputbox" size="30"
+			default="1" />
+		
+		<field name="auto_flip_size" type="text" 
+			label="COM_FLIPPINGBOOK_FLIP_AREA"
+			description="COM_FLIPPINGBOOK_FLIP_AREA_DESC" class="inputbox" size="30" 
+			default="75" />
+		
+		<field name="static_shadows_depth" type="text" 
+			label="COM_FLIPPINGBOOK_STATIC_SHADOW_DEPTH"
+			description="COM_FLIPPINGBOOK_STATIC_SHADOW_DEPTH_DESC" class="inputbox" size="30" 
+			default="1" />
+		
+		<field id="static_shadows_type" name="static_shadows_type" type="list"
+			label="COM_FLIPPINGBOOK_STATIC_SHADOWS_TYPE" description="COM_FLIPPINGBOOK_STATIC_SHADOWS_TYPE_DESC"
+			class="inputbox" size="1" default="Asymmetric" >
+			<option value="Symmetric">COM_FLIPPINGBOOK_SYMMETRIC</option>
+			<option value="Asymmetric">COM_FLIPPINGBOOK_ASYMMETRIC</option>
+		</field>
+		
+		<field name="dynamic_shadows_depth" type="text" 
+			label="COM_FLIPPINGBOOK_DYNAMIC_SHADOW_DEPTH"
+			description="COM_FLIPPINGBOOK_DYNAMIC_SHADOW_DEPTH_DESC" class="inputbox" size="30" 
+			default="2" />
+		
+		<field name="flip_corner_style"
+				type="radio"
+				class="btn-group"
+				description="COM_FLIPPINGBOOK_FLIP_CORNER_DESC"
+				label="COM_FLIPPINGBOOK_FLIP_CORNER"
+				labelclass="control-label"
+				default="manually"
+				>
+				<option value="manually">JNO</option>
+				<option value="first page only">JYES</option>
+			</field>
+		
+		<field name="allow_pages_unload"
+				type="radio"
+				class="btn-group"
+				description="COM_FLIPPINGBOOK_ALLOW_PAGES_UNLOAD_DESC"
+				label="COM_FLIPPINGBOOK_ALLOW_PAGES_UNLOAD"
+				labelclass="control-label"
+				default="0"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+	</fieldset>
+	
+	<fieldset name="background" label="COM_FLIPPINGBOOK_BOOK_PARAMETERS">			
+		<field name="background_image" type="modal_image_for_background"
+			label="COM_FLIPPINGBOOK_BACKGROUND_IMAGE" description="COM_FLIPPINGBOOK_BACKGROUND_IMAGE_DESC"
+			class="inputbox" />
+		
+		<field id="background_image_placement" name="background_image_placement" type="list"
+			label="COM_FLIPPINGBOOK_BACKGROUND_IMAGE_PLACEMENT" description="COM_FLIPPINGBOOK_BACKGROUND_IMAGE_PLACEMENT_DESC"
+			class="inputbox" size="1" 
+			default="fit" >
+			<option value="fit">COM_FLIPPINGBOOK_FIT</option>
+			<option value="center">COM_FLIPPINGBOOK_CENTER</option>
+			<option value="top left">COM_FLIPPINGBOOK_TOP_LEFT</option>
+		</field>
+		
+		<field name="background_color" type="text" 
+			label="COM_FLIPPINGBOOK_BACKGROUND_COLOR"
+			description="COM_FLIPPINGBOOK_BACKGROUND_COLOR_DESC" class="inputbox" size="30"
+			default="EEEEEE" />
+		
+		<field name="page_background_color" type="text" 
+			label="COM_FLIPPINGBOOK_PAGES_COLOR"
+			description="COM_FLIPPINGBOOK_PAGES_COLOR_DESC" class="inputbox" size="30"
+			default="FFFFFF" />
+	</fieldset>
+	
+	<fieldset name="navigation_bar" label="COM_FLIPPINGBOOK_BOOK_PARAMETERS">
+		<field name="navigation_bar" type="modal_navigation_bar_files"
+			description="COM_FLIPPINGBOOK_NAVIGATION_BAR_FILE_DESC"
+			label="COM_FLIPPINGBOOK_NAVIGATION_BAR_FILE"
+			default="navigation.swf" />
+		
+		<field id="navigation_bar_placement" name="navigation_bar_placement" type="list"
+			label="COM_FLIPPINGBOOK_PLACEMENT" description="COM_FLIPPINGBOOK_PLACEMENT_DESC"
+			class="inputbox" size="1" 
+			default="bottom" >
+			<option value="bottom">COM_FLIPPINGBOOK_BOTTOM</option>
+			<option value="top">COM_FLIPPINGBOOK_TOP</option>
+		</field>
+		
+		<field name="fullscreen_enabled"
+				type="radio"
+				class="btn-group"
+				description="COM_FLIPPINGBOOK_SHOW_FULLSCREEN_BUTTON_DESC"
+				label="COM_FLIPPINGBOOK_SHOW_FULLSCREEN_BUTTON"
+				labelclass="control-label"
+				default="1"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+		
+		<field name="go_to_page_field"
+				type="radio"
+				class="btn-group"
+				description="COM_FLIPPINGBOOK_SHOW_GO_TO_PAGE_FIELD_DESC"
+				label="COM_FLIPPINGBOOK_SHOW_GO_TO_PAGE_FIELD"
+				labelclass="control-label"
+				default="1"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+		
+		<field name="show_slide_show_button"
+				type="radio"
+				class="btn-group"
+				description="COM_FLIPPINGBOOK_SHOW_SLIDESHOW_BUTTON_DESC"
+				label="COM_FLIPPINGBOOK_SHOW_SLIDESHOW_BUTTON"
+				labelclass="control-label"
+				default="1"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+		
+		<field name="first_last_buttons"
+				type="radio"
+				class="btn-group"
+				description="COM_FLIPPINGBOOK_SHOW_FIRST_AND_LAST_BUTTONS_DESC"
+				label="COM_FLIPPINGBOOK_SHOW_FIRST_AND_LAST_BUTTONS"
+				labelclass="control-label"
+				default="1"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+		
+		<field name="print_enabled"
+				type="radio"
+				class="btn-group"
+				description="COM_FLIPPINGBOOK_PRINT_BUTTON_DESC"
+				label="COM_FLIPPINGBOOK_PRINT_BUTTON"
+				labelclass="control-label"
+				default="1"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+		
+		<field name="sound_control_button"
+				type="radio"
+				class="btn-group"
+				description="COM_FLIPPINGBOOK_SHOW_SOUND_CONTROL_BUTTON_DESC"
+				label="COM_FLIPPINGBOOK_SHOW_SOUND_CONTROL_BUTTON"
+				labelclass="control-label"
+				default="1"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+	</fieldset>
+	
+	<fieldset name="zoom_settings" label="COM_FLIPPINGBOOK_BOOK_PARAMETERS">
+	
+		<field name="zoom_enabled"
+				type="radio"
+				class="btn-group"
+				description="COM_FLIPPINGBOOK_ZOOM_ENABLED_DESC"
+				label="COM_FLIPPINGBOOK_ZOOM_ENABLED"
+				labelclass="control-label"
+				default="1"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+	
+		<field name="show_zoom_hint"
+				type="radio"
+				class="btn-group"
+				description="COM_FLIPPINGBOOK_SHOW_ZOOM_HINT_DESC"
+				label="COM_FLIPPINGBOOK_SHOW_ZOOM_HINT"
+				labelclass="control-label"
+				default="1"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+		
+		<field id="zooming_method" name="zooming_method" type="list"
+			label="COM_FLIPPINGBOOK_METHOD_OF_ZOOMING" description="COM_FLIPPINGBOOK_METHOD_OF_ZOOMING_DESC"
+			class="inputbox" size="1" 
+			default="0" >
+			<option value="0">COM_FLIPPINGBOOK_ZOOM_IN_FLASH</option>
+			<option value="1">COM_FLIPPINGBOOK_AJAX_WINDOW</option>
+		</field>
+		
+		<field name="zoom_image_width" type="text" 
+			label="COM_FLIPPINGBOOK_WIDTH_OF_ZOOMED_PAGE"
+			description="COM_FLIPPINGBOOK_WIDTH_OF_ZOOMED_PAGE_DESC" class="inputbox" size="30" 
+			default="1200" />
+		
+		<field name="zoom_image_height" type="text" 
+			label="COM_FLIPPINGBOOK_HEIGHT_OF_ZOOMED_PAGE"
+			description="COM_FLIPPINGBOOK_HEIGHT_OF_ZOOMED_PAGE_DESC" class="inputbox" size="30" 
+			default="1600" />
+		
+		<field name="zoom_ui_color" type="text" 
+			label="COM_FLIPPINGBOOK_COLOR_OF_SCROLLBARS"
+			description="COM_FLIPPINGBOOK_COLOR_OF_SCROLLBARS_DESC" class="inputbox" size="30" 
+			default="8F9EA6" />
+	</fieldset>
+	
+	<fieldset name="download_book" label="COM_FLIPPINGBOOK_BOOK_PARAMETERS">
+		<field name="download_url" type="text" 
+			label="COM_FLIPPINGBOOK_DOWNLOAD_URL"
+			description="COM_FLIPPINGBOOK_DOWNLOAD_URL_DESC" class="inputbox" size="30" 
+			default="" />
+		
+		<field name="download_title" type="text" 
+			label="COM_FLIPPINGBOOK_TITLE_OF_DOWNLOAD_WINDOW"
+			description="COM_FLIPPINGBOOK_TITLE_OF_DOWNLOAD_WINDOW_DESC" class="inputbox" size="30" 
+			default="Download Book" />
+		
+		<field name="download_size" type="text" 
+			label="COM_FLIPPINGBOOK_FILE_SIZE"
+			description="COM_FLIPPINGBOOK_FILE_SIZE_DESC" class="inputbox" size="30" 
+			default="100 Kb" />
+	</fieldset>
+	
+	<fieldset name="slideshow" label="COM_FLIPPINGBOOK_BOOK_PARAMETERS">		
+	
+		<field name="slideshow_auto_play"
+				type="radio"
+				class="btn-group"
+				description="COM_FLIPPINGBOOK_TURN_SLIDESHOW_ON_DESC"
+				label="COM_FLIPPINGBOOK_TURN_SLIDESHOW_ON"
+				labelclass="control-label"
+				default="0"
+				>
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+		
+		<field name="slideshow_display_duration" type="text" 
+			label="COM_FLIPPINGBOOK_INTERVAL"
+			description="COM_FLIPPINGBOOK_INTERVAL_DESC" class="inputbox" size="30" 
+			default="5000" />
+	</fieldset>
+	
+	<fieldset name="book_window" label="COM_FLIPPINGBOOK_BOOK_PARAMETERS">
+		<field id="open_book_in" name="open_book_in" type="list"
+			label="COM_FLIPPINGBOOK_BOOK_LINK_TARGET" description="COM_FLIPPINGBOOK_BOOK_LINK_TARGET_DESC"
+			class="inputbox" size="1" 
+			default="1" >
+			<option value="1">COM_FLIPPINGBOOK_PARENT_WINDOW_WITH_BROWSER_NAVIGATION</option>
+			<option value="3">COM_FLIPPINGBOOK_NEW_WINDOW_WITHOUT_BROWSER_NAVIGATION</option>
+			<option value="4">COM_FLIPPINGBOOK_FULLSCREEN_POPUP_WINDOW</option>
+		</field>
+		
+		<field name="new_window_width" type="text" 
+			label="COM_FLIPPINGBOOK_NEW_WINDOW_WIDTH"
+			description="COM_FLIPPINGBOOK_NEW_WINDOW_WIDTH_DESC" class="inputbox" size="30" 
+			default="1024" />
+		
+		<field name="new_window_height" type="text" 
+			label="COM_FLIPPINGBOOK_NEW_WINDOW_HEIGHT"
+			description="COM_FLIPPINGBOOK_NEW_WINDOW_HEIGHT_DESC" class="inputbox" size="30" 
+			default="768" />
+	</fieldset>
+</form>

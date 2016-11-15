@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.1" type="template" client="site">
+<name>pjo_business_free</name>
+<version>1.0</version>
+<creationDate>2016</creationDate>
+<author>pickjoomla</author>
+<authorEmail>info@pickjoomla.com</authorEmail>
+<authorUrl>http://www.pickjoomla.com</authorUrl>
+<copyright>copyright (c) 2016 - pickjoomla.com</copyright>
+<license>GNU/GPL v2 http://www.gnu.org/licenses/gpl-2.0.html</license>
+<description>
+<![CDATA[
+<link href="../templates/pjo_business_free/css/admin.css" rel="stylesheet" type="text/css" media="all" />
+<div class="temp_description">
+<p>
+<b>
+PJO BUSINESS FREE VERSION (LIMITED), MULTIPORPOUSE JOOMLA! 3.X TWITTER BOOTSTRAP TEMPLATE<br>
+<a href="http://demo4.pickjoomla.com/?template=pjo_business" target="_blank">DEMO</a> /
+<a href="http://www.pickjoomla.com" target="_blank">WEBSITE</a> /
+<a href="http://www.pickjoomla.com/free-templates" target="_blank">FREE TEMPLATES</a> /
+<a href="http://www.pickjoomla.com/support" target="_blank">CONTACT</a> /
+<a href="http://www.pickjoomla.com/pjo-business-pro" target="_blank">PRO LINK</a> /
+</b>
+</p>
+</div>
+<p></p>
+<img src="../templates/pjo_business_free/template_thumbnail.png" border="0" title="" alt=""/>
+<p></p>
+]]>
+</description>
+<files>
+<filename>index.php</filename>
+<filename>component.php</filename>
+<filename>template_thumbnail.png</filename>
+<filename>templateDetails.xml</filename>
+<folder>images</folder>
+<folder>css</folder>
+<folder>html</folder>
+<folder>language</folder>
+<folder>elements</folder>
+</files>
+<positions>
+<position>left</position>
+<position>right</position>
+<position>header_top1</position>
+<position>header_top2</position>
+<position>top1</position>
+<position>top2</position>
+<position>top3</position>
+<position>top4</position>
+<position>bottom1</position>
+<position>bottom2</position>
+<position>bottom3</position>
+<position>bottom4</position>
+<position>footer</position>
+<position>footer1</position>
+<position>footer2</position>
+<position>footer3</position>
+<position>footer4</position>
+</positions>
+<languages folder="language">
+<language tag="en-GB">en-GB/en-GB.tpl_pjo_business_free.ini</language>
+</languages>
+<config>
+
+<fields name="params" addfieldpath="/templates/pjo_business_free/elements">
+<!-- GENERAL -->
+
+<fieldset name="gener_par" label="General">
+
+<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt; Horizontal Menu &lt;/div&gt;" />
+<field name="hornav_menu" type="menu" default="mainmenu" label="Select Menu" description="Select menu to display on top horizontal" />
+
+<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt; Logo &lt;/div&gt;" />
+<field name="logoFile" type="media" default="" label="Logo Image" description="Upload your logo image" />
+<field name="sitetitle"  type="text" default="" label="Logo Text" description="Site Name (Add your site name here to disable logo image)" filter="string" />
+<field name="sitedescription"  type="text" default="" label="Slogan" description="Site Slogan (Add your slogan here, in case like to use it as text)" filter="string" />
+
+<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt; Footer &lt;/div&gt;" />
+<field name="comp_info" label="Your Site Information" type="textarea" filter="safehtml"  cols="30" rows="5" default="" description="edit footer site information, HTML allowed (author link can be disabled on pro version)" />
+
+<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt; Fav icon / mobile / rtl / analytics (pro) &lt;/div&gt;" />
+<field name="my_favicon" type="media" default="" label="Favicon (pro)" description="Edit your own favicon and pres CTRL + R to refresh the site and see the changes. There is online site where you can create custom favicon http://favicon-generator.org" />	
+<field name="resp_options" type="radio" class="btn-group btn-group-yesno" default="disable" label="Enable Responsive (pro)" description="Enable responsive for mobile devices">
+<option value="enable">Responsive</option>
+<option value="disable">Non-Resposive</option>
+</field>
+<field name="rtl_option" type="radio" class="btn-group btn-group-yesno" default="enable" label="Enable/Disable RTL (pro)" description="Enable or Disable right to left language (for arabic language etc). NOTE: First your joomla installation must support RTL language, otherwise it will not take effect even it is set to ENABLE">
+<option value="enable">Enable</option>
+<option value="disable">Disable</option>
+</field>
+<field name="analyticsCode" type="text" label="Google Analytics Code (pro)" description="Add your Google analytics code here. E.x: UA-44442708-2" default="" />
+
+</fieldset>
+
+<!-- //GENERAL -->
+
+<!-- WIDTH AND HEIGHT OPTIONS -->
+<fieldset name="width_height_options" label="Layouts">
+<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt; Width Options &lt;/div&gt;" />
+
+<field name="maxWidth" type="text" default="960px" disabled="true" label="Template Width" description="Edit template width in px (example, 960px 1000px or 1100px etc). If you like fullscreen than add 100% (pro)" />
+
+<field name="sidebar_size" type="list" default="medium" label="Sidebar Width" description="Change the width for left and right sidebars">
+<option value="small" disabled="true">Small (pro)</option>
+<option value="medium">Medium</option>
+<option value="large" disabled="true">Large (pro)</option>
+</field>
+
+<field name="temp_layout" type="list" default="left-content-right" label="Template Layout" description="Sidebar and content layout">
+<option value="left-content-right">Left-Content-Right</option>
+<option value="left1-left2-content" disabled="true">Left1-Left2-Content</option>
+<option value="content-right1-right2" disabled="true">Content-Right1-Right2</option>
+<option value="left1-left2-content-right1-right2" disabled="true">Left1-Left2-Content-Right1-Right2</option>
+</field>
+
+<field type="spacer" name="&lt;div class=&quot;heading&quot;&gt; Height Options (pro) &lt;/div&gt;" />
+<field name="hornav_height" type="text" default="" label="Horizontal Menu" description="Edit navigation height in px (example, 50px or 60px etc. with px after)" />
+<field name="slideshow_height" type="text" default="" label="Slideshow" description="Edit slideshow height (example, 500px or 400px etc.)" />
+<field name="mod_top_height" type="text" default="" label="Top" description="Modules Top Height in pixels (example, 346px). For automatic height write auto (example, auto)" />
+<field name="mod_content_height" type="text" default="" label="Content" description="Modules Content Height in pixels (example, 346px). For automatic height write auto (example, auto)" />
+<field name="mod_bottom_height" type="text" default="" label="Bottom" description="Modules Bottom Height in pixels (example, 346px). For automatic height write auto (example, auto)" />
+<field name="mod_footer_height" type="text" default="" label="Footer" description="Modules Footer Height in pixels (example, 346px). For automatic height write auto (example, auto)" />
+
+</fieldset>
+<!-- //WIDTH AND HEIGHT OPTIONS -->
+
+<!-- STYLE OPTIONS -->
+<fieldset name="style_options" label="Style">
+
+<!-- STATIC COLORS -->
+<field type="spacer" name="&lt;div class=&quot;heading&quot;&gt; Color style (pro)&lt;/div&gt;" />
+<field name="CssStyle" type="list" default="default" label="Select Styles" description="Select what color style you like to have">
+<option value="default">Default Style</option>
+<option value="style1">Style1</option>
+<option value="style2">Style2</option>
+<option value="style3">Style3</option>
+<option value="style4">Style4</option>
+</field>
+<field name="toolbar_option" type="list" default="1" label="Toolbar Color" description="Enable color toolbar for changing template color in front">
+<option value="1">Enable</option>
+<option value="0">Disable</option>
+</field>
+
+<!-- CUSTOM COLOR -->
+<field type="spacer" name="&lt;div class=&quot;heading&quot;&gt; custom style (pro)&lt;/div&gt;" />
+
+<!-- BACKGROUND IMAGE -->
+<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt; background image &lt;/div&gt;" />
+<field name="body_bg_image_file" type="media" default="" label="Template" description="Edit background image for the template" />
+<field name="header_bg_image_file" type="media" default="" label="Header" description="Edit background image for header" />
+<field name="nav_bg_image_file" type="media" default="" label="Navigation" description="Edit background image for horizontal menu" />
+<!--
+<field name="mainbody_bg_image_file" type="media" default="" label="Content" description="Edit background image for mainbody" />
+<field name="module_bg_image_file" type="media" default="" label="Modules" description="Edit background image for modules" />
+-->
+<field name="footer_bg_image_file" type="media" default="" label="Footer" description="Edit background image for footer" />
+
+<!-- BACKGROUND IMAGE REPEAT -->
+<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt; background image repeat &lt;/div&gt;" />
+<field name="body_bg_repeat_option" type="list" default="" label="Template" description="Repeat template background image">
+<option value="">Select Option</option>
+<option value="bg_repeat">Repeat Horizontal and Vertical</option>
+<option value="bg_repeat_x">Repeat Horizontal</option>
+<option value="bg_no_repeat">No Repeat</option>
+<option value="bg_fixed">Fixed</option>
+</field>
+<field name="header_bg_repeat_option" type="list" default="" label="Header" description="Repeat header background image">
+<option value="">Select Option</option>
+<option value="bg_repeat">Repeat Horizontal and Vertical</option>
+<option value="bg_repeat_x">Repeat Horizontal</option>
+<option value="bg_no_repeat">No Repeat</option>
+<option value="bg_fixed">Fixed</option>
+</field>
+<field name="hor_nav_bg_repeat_option" type="list" default="" label="Navigation" description="Repeat navigation background image">
+<option value="">Select Option</option>
+<option value="bg_repeat">Repeat Horizontal and Vertical</option>
+<option value="bg_repeat_x">Repeat Horizontal</option>
+<option value="bg_no_repeat">No Repeat</option>
+<option value="bg_fixed">Fixed</option>
+</field>
+
+<field name="footer_bg_repeat_option" type="list" default="" label="Footer" description="Repeat footer background image">
+<option value="">Select Option</option>
+<option value="bg_repeat">Repeat Horizontal and Vertical</option>
+<option value="bg_repeat_x">Repeat Horizontal</option>
+<option value="bg_no_repeat">No Repeat</option>
+<option value="bg_fixed">Fixed</option>
+</field>
+
+<!-- BACKGROUND COLOR -->
+<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt; background color &lt;/div&gt;" />
+<field name="template_bg_color" type="color" default="" label="Template" description="Edit background color for the template" />
+<field name="header_bg_color" type="color" default="" label="Header" description="Edit background color for the header" /> 
+<field name="hornav_bg_color" type="color" default="" label="Navigation" description="Edit background color for the horizontal menu" />
+<field name="module_content_bg_color" type="color" default="" label="Content" description="Edit background color for mainbody" />
+<field name="footer_bg_color" type="color" default="" label="Footer" description="Edit background color for the footer" />
+
+<!-- TRANSPARENCY SCALE -->
+<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt;transparency &lt;/div&gt;" />
+<field name="template_bg_opacity" type="TransparencyScale" default="1.0" label="Template" description="Increasing the scale the background becomes less transparent">
+<option value="transparency_scale1">transparency_scale</option>
+</field>
+
+<field name="header_bg_opacity" type="TransparencyScale" default="1.0" label="Header" description="Increasing the scale the background becomes less transparent">
+<option value="transparency_scale1">transparency_scale</option>
+</field>
+<field name="hornav_bg_opacity" type="TransparencyScale" default="1.0" label="Navigation" description="Increasing the scale the background becomes less transparent">
+<option value="transparency_scale1">transparency_scale</option>
+</field>
+
+<field name="modules_bg_opacity" type="TransparencyScale" default="1.0" label="Modules" description="Increasing the scale the background becomes less transparent">
+<option value="transparency_scale1">transparency_scale</option>
+</field>
+
+<field name="footer_bg_opacity" type="TransparencyScale" default="1.0" label="Footer" description="Increasing the scale the background becomes less transparent">
+<option value="transparency_scale1">transparency_scale</option>
+</field>
+
+<!-- TEXT COLOR -->
+<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt; Text Color &lt;/div&gt;" />
+<field name="template_text_color" type="color" default="" label="Template" description="Edit template general text color. Click save and preview to see the changes" />
+<field name="header_text_color" type="color" default="" label="Header" description="Edit header text color" />
+<field name="mainbody_text_color" type="color" default="" label="Content" description="Edit mainbody text color" />
+<field name="module_footer_text_color" type="color" default="" label="Footer" description="Edit footer text color" />
+<field name="mod_slidesshow" type="color" default="" label="Slideshow" description="Edit slideshow text color" />
+
+<!-- LINKS COLOR -->
+<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt; Links Color &lt;/div&gt;" />
+<field name="template_links_color" type="color" default="" label="Template" description="Edit template general links color. Click save and preview to see the changes" />
+<field name="header_links_color" type="color" default="" label="Header" description="Edit header links color" />
+<field name="hornav_font_color" type="color" default="" label="Navigation" description="Edit navigation links color" />
+<field name="mainbody_links_color" type="color" default="" label="Content" description="Edit mainbody links color" />
+<field name="module_footer_links_color" type="color" default="" label="Footer" description="Edit footer links color" />
+</fieldset>
+<!-- //STYLE OPTIONS -->
+
+<!-- SOCIALMEDIA  -->
+<fieldset name="social_media" label="Socialmedia Links">
+<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt;Social-Media Links&lt;/div&gt;" />
+<field name="display_social_links" type="list" default="no" label="Socialmedia" description="Enable or disable socialmedia links here">
+<option value="yes">Enable</option>
+<option value="no">Disable</option>
+</field>
+
+<field name="item_twitter_sw" type="list" default="1" label="Twitter" description="Enable Twitter Yes/No">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="item_twitter" type="text" size="60" default="https://twitter.com/" label="Your Twitter Url" description="Twitter URL" />
+
+<field name="item_facebook_sw" type="list" default="1" label="Facebook" description="Enable Facebook Yes/No">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="item_facebook" type="text" size="60" default="https://www.facebook.com/" label="Your Facebook Url" description="Facebook URL" />
+
+<field name="item_google_sw" type="list" default="1" label="Google" description="Enable Google Yes/No">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="item_google" type="text" size="60" default="https://plus.google.com/" label="Your Google Url" description="Google URL" />
+
+<field name="item_myspace_sw" type="list" default="1" label="MySpace" description="Enable MySpace Yes/No">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="item_myspace" type="text" size="60" default="http://www.myspace.com/" label="Your MySpace Url" description="MySpace URL" />
+
+<field name="item_linkedin_sw" type="list" default="1" label="LinkedIn" description="Enable LinkedIn Yes/No">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="item_linkedin" type="text" size="60" default="http://www.linkedin.com/" label="Your LinkedIn Url" description="LinkedIn URL" />
+
+<field name="item_blogger_sw" type="list" default="1" label="Youtube" description="Enable Youtube Yes/No">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="item_blogger" type="text" size="60" default="http://www.youtube.com/" label="Your Youtube Url" description="Youtube URL" />
+
+<field name="item_flickr_sw" type="list" default="0" label="Vimeo" description="Enable Vimeo Yes/No">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="item_flickr" type="text" size="60" default="http://www.vimeo.com/" label="Your Vimeo Url" description="Vimeo URL" />
+
+<field name="item_rssfeed_sw" type="list" default="0" label="RSS Feed" description="Enable RSS Feed Yes/No">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="item_rssfeed" type="text" size="60" default="index.php" label="Your RSS Feed Url" description="RSS Feed URL" />
+
+<field name="item_stumble_sw" type="list" default="1" label="Skype" description="Enable Skype Yes/No">
+<option value="0">No</option>
+<option value="1">Yes</option>
+</field>
+<field name="item_stumble" type="text" size="60" default="http://www.skype.com/" label="Your Skype Url" description="Skype URL" />
+</fieldset>
+
+<!-- SLIDESHOW -->
+<fieldset name="slideshow_parameters" label="Slideshow">
+<field name="menuid" type="menuitem"  multiple="true" size="10" default="0" label="Show Slideshow to those menu items" description="Select menu items where the slideshow should, scroll down and upload your images" >
+<option value="0">Select Items</option>
+</field>
+
+<field name="slideshow_3d_or_2d" type="list" default="2d" label="Effect Type (pro)" description="Select 3D or 2D transition">
+<option value="3d">3D Transition</option>
+<option value="2d">2D Transition</option>
+</field>
+<field name="slideshow_effect" type="text" default="1" label="Slideshow Effect (pro)" description="Edit slideshow effect (Add numbers from 1 to 100, example 2 or 3 or 7 etc. Each different number means different effect)." />
+<field name="slideshow_delay" type="text" default="6000"  label="Images Delay (pro)" description="Increase or Dicrease TIME change between slides (example, 3000 or 5000 etc" />
+<field name="slideshow_readmore" type="text" label="ReadMore Button (pro)" description="Edit read more text for slides info text" default="" />
+
+<!-- SLIDE 1 -->
+<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt;Slide 1&lt;/div&gt;" />
+<field name="image1" label="Image" type="media" description="Choose an image." />
+<field name="slidetext1" label="Slidetext" type="textarea" filter="safehtml" cols="30" rows="5" default="" description="Add image caption here" />
+<field name="link1" label="Read More Link (pro)" type="text" description="URL where the slider text info should link" />
+
+<field name="article_id1_1" type="modal_article" default="" label="Select Article (pro)" description="Select article to display on this slide" />
+<field name="article_id1_2" type="modal_article" default="" label="Select Article (pro)" description="Select article to display on this slide" />
+<!-- <field name="article_id1_3" type="modal_article" default="" label="Select Article (pro)" description="Select article to display on this slide" /> -->
+
+<!-- SLIDE 2 -->
+<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt;Slide 2&lt;/div&gt;" />
+<field name="image2" label="Image" type="media" description="Choose an image." />
+<field name="slidetext2" label="Slidetext" type="textarea" filter="safehtml" cols="30" rows="5" default="" description="Add image caption here" />
+<field name="link2" label="Read More Link (pro)" type="text" description="URL where the slider text info should link" />
+
+<field name="article_id2_1" type="modal_article" default="" label="Select Article (pro)" description="Select article to display on this slide" />
+<field name="article_id2_2" type="modal_article" default="" label="Select Article (pro)" description="Select article to display on this slide" />
+<!-- <field name="article_id2_3" type="modal_article" default="" label="Select Article (pro)" description="Select article to display on this slide" /> -->
+
+<!-- SLIDE 3 -->
+<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt;Slide 3&lt;/div&gt;" />
+<field name="image3" label="Image" type="media"  description="Choose an image." />
+<field name="slidetext3" label="Slidetext" type="textarea" filter="safehtml" cols="30" rows="5" default="" description="Add image caption here" />
+<field name="link3" label="Read More Link (pro)" type="text" description="URL where the slider text info should link" />
+
+<field name="article_id3_1" type="modal_article" default="" label="Select Article (pro)" description="Select article to display on this slide" />
+<field name="article_id3_2" type="modal_article" default="" label="Select Article (pro)" description="Select article to display on this slide" />
+<!-- <field name="article_id3_3" type="modal_article" default="" label="Select Article (pro)" description="Select article to display on this slide" /> -->
+
+<!-- SLIDE 4 -->
+<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt;Slide4 &lt;/div&gt;" />
+<field name="image4" label="Image" type="media"  description="Choose an image." />
+<field name="slidetext4" label="Slidetext" type="textarea" filter="safehtml" cols="30" rows="5" default="" description="Add image caption here" />
+<field name="link4" label="Read More Link (pro)" type="text"  description="URL where the slider text info should link" />
+
+<field name="article_id4_1" type="modal_article" default="" label="Select Article (pro)" description="Select article to display on this slide" />
+<field name="article_id4_2" type="modal_article" default="" label="Select Article (pro)" description="Select article to display on this slide" />
+<!-- <field name="article_id4_3" type="modal_article" default="" label="Select Article (pro)" description="Select article to display on this slide" /> -->
+
+<!-- slide 5 -->
+<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt; slide5 &lt;/div&gt;" />
+<field name="image5" label="Image" type="media"  description="Choose an image." />
+<field name="slidetext5" label="Slidetext" type="textarea" filter="safehtml" cols="30" rows="5" default="" description="Add image caption here" />
+<field name="link5" label="Read More Link" type="text"  description="URL where the slider text info should link" />
+
+<field name="article_id5_1" type="modal_article" default="" label="Select Article (pro)" description="Select article to display on this slide" />
+<field name="article_id5_2" type="modal_article" default="" label="Select Article (pro)" description="Select article to display on this slide" />
+<!-- <field name="article_id5_3" type="modal_article" default="" label="Select Article (pro)" description="Select article to display on this slide" /> -->
+
+<!-- slide 6 -->
+<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt; slide6 &lt;/div&gt;" />
+<field name="image6" label="Image" type="media"  description="Choose an image." />
+<field name="slidetext6" label="Slidetext" type="textarea" filter="safehtml" cols="30" rows="5" default="" description="Add image caption here" />
+<field name="link6" label="Read More Link" type="text"  description="URL where the slider text info should link" />
+
+<field name="article_id6_1" type="modal_article" default="" label="Select Article (pro)" description="Select article to display on this slide" />
+<field name="article_id6_2" type="modal_article" default="" label="Select Article (pro)" description="Select article to display on this slide" />
+<!-- <field name="article_id6_3" type="modal_article" default="" label="Select Article (pro)" description="Select article to display on this slide" /> -->
+
+<!-- slide 7 -->
+<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt; slide7  &lt;/div&gt;" />
+<field name="image7" label="Image" type="media"  description="Choose an image." />
+<field name="slidetext7" label="Slidetext" type="textarea" filter="safehtml" cols="30" rows="5" default="" description="Add image caption here" />
+<field name="link7" label="Read More Link" type="text"  description="URL where the slider text info should link" />
+
+<field name="article_id7_1" type="modal_article" default="" label="Select Article (pro)" description="Select article to display on this slide" />
+<field name="article_id7_2" type="modal_article" default="" label="Select Article (pro)" description="Select article to display on this slide" />
+<!-- <field name="article_id7_3" type="modal_article" default="" label="Select Article (pro)" description="Select article to display on this slide" /> -->
+
+<!-- slide 8 -->
+<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt; slide8  &lt;/div&gt;" />
+<field name="image8" label="Image" type="media"  description="Choose an image." />
+<field name="slidetext8" label="Slidetext" type="textarea" filter="safehtml" cols="30" rows="5" default="" description="Add image caption here" />
+<field name="link8" label="Read More Link" type="text"  description="URL where the slider text info should link" />
+
+<field name="article_id8_1" type="modal_article" default="" label="Select Article (pro)" description="Select article to display on this slide" />
+<field name="article_id8_2" type="modal_article" default="" label="Select Article (pro)" description="Select article to display on this slide" />
+<!-- <field name="article_id8_3" type="modal_article" default="" label="Select Article (pro)" description="Select article to display on this slide" /> -->
+
+<!-- slide 9 -->
+<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt; slide9  &lt;/div&gt;" />
+<field name="image9" label="Image" type="media"  description="Choose an image." />
+<field name="slidetext9" label="Slidetext" type="textarea" filter="safehtml" cols="30" rows="5" default="" description="Add image caption here" />
+<field name="link9" label="Read More Link" type="text"  description="URL where the slider text info should link" />
+
+<field name="article_id9_1" type="modal_article" default="" label="Select Article (pro)" description="Select article to display on this slide" />
+<field name="article_id9_2" type="modal_article" default="" label="Select Article (pro)" description="Select article to display on this slide" />
+<!-- <field name="article_id9_3" type="modal_article" default="" label="Select Article (pro)" description="Select article to display on this slide" /> -->
+
+<!-- slide 10 -->
+<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt; slide10  &lt;/div&gt;" />
+<field name="image10" label="Image 10" type="media"  description="Choose an image." />
+<field name="slidetext10" label="Slidetext" type="textarea" filter="safehtml" cols="30" rows="5" default="" description="Add image caption here" />
+<field name="link10" label="Read More Link" type="text"  description="URL where the slider text info should link" />
+
+<field name="article_id10_1" type="modal_article" default="" label="Select Article (pro)" description="Select article to display on this slide" />
+<field name="article_id10_2" type="modal_article" default="" label="Select Article (pro)" description="Select article to display on this slide" />
+<!-- <field name="article_id10_3" type="modal_article" default="" label="Select Article (pro)" description="Select article to display on this slide" /> -->
+
+</fieldset>
+<!-- // SLIDESHOW -->
+
+<!-- SLIDEPANEL -->
+<fieldset name="slide_panel" label="Slidepanel">
+<field type="spacer" name="&lt;div class=&quot;heading&quot;&gt;slidepanel (pro) &lt;/div&gt;" />
+<field name="v_slidepanel" type="list" default="enable" label="Slidepanel" description="Enable or Disable slide panel button">
+<option value="enable">Enable</option>
+<option value="disable">Disable</option>
+</field>
+<field name="fa15" type="FontAwesome" default="icon-info" label="Button Icon" description="SlidePanel Icon">
+<option value="awesome1">awesome1</option>
+</field>
+<field name="slidepanel_button_text" type="text" label="Button Text" description="Edit slidepanel button text" default="Slide Panel" />
+</fieldset>
+<!-- //SLIDE PANEL -->
+
+
+
+<!-- ADVANCED SETTINGS -->
+<fieldset name="advanced_settings" label="Advanced Settings">
+
+<field type="spacer" name="&lt;div class=&quot;heading&quot;&gt; advanced settings (pro) &lt;/div&gt;" />
+
+<!-- show hide mainbody -->
+<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt; MAINBODY OPTIONS &lt;/div&gt;"/>
+<field name="enable_disable_mainbody" type="list" default="enable" label="Show Mainbody" description="If you like to show mainbody only on some menu items, select from dropdown ON SELECTED ITEMS and than select some menu items">
+<option value="enable">On All Menu Items</option>
+<option value="disable">On Selected Items</option>
+</field>
+<field name="m_b" type="menuitem" multiple="true" size="10" default="0" label="Select Menu Items" description="Select menu items where mainbody should show up. Live it empty if you like to disable mainbody completly">
+<option value="0">Select Items</option>
+</field>
+
+<!-- module style -->
+<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt; MODULE STYLE &lt;/div&gt;"/>
+<!-- top module style -->
+<field name="top_module_style" type="list" default="default" label="Top Modules Style" description="Select style for top1, top2, top3, top4 positions">
+<option value="crate">Default Style</option>
+<option value="zoom_style">Zoom Style</option>
+</field>
+<!-- bottom module style -->
+<field name="bottom_module_style" type="list" default="default" label="Bottom Modules Style" description="Select style for bottom1, bottom2, bottom3, bottom4 positions">
+<option value="crate">Default Style</option>
+<option value="zoom_style">Zoom Style</option>
+</field>
+
+<!-- font size -->
+<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt; font size &lt;/div&gt;" />
+<field name="font_size" type="text" default="" label="Template" description="Edit template font size in pixels or percent(example 12px or 110% etc)" />
+<field name="menu_font_size" type="text" default="" label="Navigation" description="Edit horizontal menu font size in pixels or percent(example 12px or 110% etc)" />
+<field name="mainbody_title_font_size" type="text" default="" label="Mainbody Title" description="Edit mainbody title font size (example 11px or 12px etc.)" />
+<field name="module_h3_font_size" type="text" default="" label="Module Title" description="Edit module title font size in pixels or percent(example 12px or 110% etc)" />
+
+<!-- google fonts -->
+<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt; google fonts &lt;/div&gt;" />
+<field name="body_fontstyle" type="WebFonts" default="Arial" label="Standard Fonts" description="Select standard template fonts">
+<option value="font1">font1</option>
+</field>
+<field name="googleFont_body" type="list" default="0" label="Template Google Fonts" description="Enable or Disable google fonts for template. If you choose Enable than it will override the Standard Fonts above">
+<option value="0">Disable</option>
+<option value="1">Enable</option>
+</field>
+<field name="googleFontName_body" type="text" default="Archivo Narrow" label="Template Google Font Name" description="Example: Oswald, link to choose (http://www.google.com/fonts)" />
+<field name="googleFont_titles" type="list" default="1" label="Titles Google Fonts" description="Enable/Disable google fonts for module titles, slideshow and menu">
+<option value="0">Disable</option>
+<option value="1">Enable</option>
+</field>
+<field name="googleFontName_titles" type="text" default="Oswald" label="Titles Google Font Name" description="Example: Oswald, link to choose (http://www.google.com/fonts)" />
+
+<!-- font weight -->
+<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt; font weight &lt;/div&gt;" />
+<field name="nagivation_font_weight" type="list" default="" label="Navigation" description="Edit horizontal navigation font weight">
+<option value="">Select Option</option>
+<option value="normal">Normal</option>
+<option value="bold">Bold</option>
+</field>
+<field name="modules_font_weight" type="list" default="" label="Titles" description="Edit module and mainbody title font weight">
+<option value="">Select Option</option>
+<option value="normal">Normal</option>
+<option value="bold">Bold</option>
+</field>
+
+<!-- text transform -->
+<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt; text transform &lt;/div&gt;" />
+<field name="menu_text_transform" type="list" default="" label="Navigation" description="Edit horizontal menu text transform">
+<option value="">Select Option</option>
+<option value="none">None</option>
+<option value="uppercase">Uppercase</option>
+<option value="lowercase">Lowercase</option>
+<option value="capitalize">Capitalize</option>
+</field>
+<field name="modules_text_transform" type="list" default="" label="Module and Mainbody Titles" description="Text transform for modules, mainbody and slideshow">
+<option value="">Select Option</option>
+<option value="none">None</option>
+<option value="uppercase">Uppercase</option>
+<option value="lowercase">Lowercase</option>
+<option value="capitalize">Capitalize</option>
+</field>
+
+<!-- responsive menu text -->
+<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt; responsive menu text &lt;/div&gt;" />
+<field name="responsive_menu_text" type="text" label="Responsive Menu Text" description="Add here the responsive text menu in your own language, for small devices (e.x by default is (Select a page))" default="Select a page" />
+
+<!-- custom css -->
+<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt; custom css &lt;/div&gt;" />
+<field name="custom_css" type="textarea" filter="raw" default="" label="Custom css" description="Add your custom css here. After this, your css code will override the defauls css" rows="10" cols="50" />
+
+<!-- sroll animations -->
+<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt; scroll animations &lt;/div&gt;" />
+<field name="animate_scroll_option" type="list" default="enable" label="scroll animations" description="Enable or disable scroll animation">
+<option value="enable">Enable</option>
+<option value="disable">Disable</option>
+</field>
+
+<!-- scroll animation type -->
+<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt; scroll animation TYPE &lt;/div&gt;" />
+<field name="css_animate_effect1" type="CssAnimate" default="bounceInUp" label="Scroll Animation Effect" description="Select scroll animation effect">
+<option value="css_effect1">css_effect</option>
+</field>
+
+<!-- disable / enable css3 -->
+<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt; enable/disable image effects &lt;/div&gt;" />
+<field name="img_effect" type="list" default="enable" label="Enable/Disable image effect" description="Enable or disable image hover effect">
+<option value="enable">Enable</option>
+<option value="disable">Disable</option>
+</field>
+
+<!-- jquery -->
+<field type="spacer" name="&lt;div class=&quot;sub-heading&quot;&gt; jquery &lt;/div&gt;" />
+<field name="jquery_noconflict" type="list" default="disable" label="noConflict Script" description="Enable/Disable jQuery nonConflict script in case any script is making jquery conflict on your site">
+<option value="enable">Enable</option>
+<option value="disable">Disable</option>
+</field>
+<field name="load_mootools" type="list" default="enable" label="Joomla! MooTools Framework" description="Enable/Disable Joomla MooTools Framework">
+<option value="enable">Enable</option>
+<option value="disable">Disable</option>
+</field>
+
+<field name="fix_strict_error" type="list" default="disable" label="Fix Error" description="Enable this only if STRICT STANDARDS ERROR appears on page">
+<option value="enable">Enable</option>
+<option value="disable">Disable</option>
+</field>
+
+</fieldset>
+<!-- //ADVANCED SETTINGS -->
+
+</fields>
+</config>
+</extension>
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Front-end queue management">
+		<message>Access the front-end queue management</message>
+	</layout>
+	<state>
+		<name>Front-end queue management</name>
+	</state>
+</metadata>

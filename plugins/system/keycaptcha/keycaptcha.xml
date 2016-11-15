@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system" method="upgrade">
+	<name>System - KeyCAPTCHA</name>
+	<author>Mersane, Ltd</author>
+	<creationDate>2014-05-20</creationDate>
+	<copyright>(C) 2011-2014 Mersane, Ltd</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL 2.0</license>
+	<authorEmail>support@keycaptcha.com</authorEmail>
+	<authorUrl>https://www.keycaptcha.com/</authorUrl>
+	<version>5.0.10</version>
+	<description>
+		<![CDATA[
+			Adds KeyCAPTCHA anti-spam solution to Joomla.<br /><br />
+			<span style="color:#CC0000; font-weight:bold;">
+				To enable KeyCAPTCHA plugin please do the following:
+				<ol>
+					<li>
+						Fill in "Private key" field on a page with properties of KeyCAPTCHA plugin.<br />
+						&nbsp;&nbsp;&nbsp;&nbsp;To open that page please click on the plugin name ("System - KeyCAPTCHA") in Joomla Plugin Manager.<br />
+						&nbsp;&nbsp;&nbsp;&nbsp;To get the value for "Private key" field please register your site at <a target="_blank" href="https://www.keycaptcha.com">www.keycaptcha.com</a>
+					</li>
+					<li>
+						Enable KeyCAPTCHA plugin in Joomla Plugin Manager (<a href="index.php?option=com_plugins&view=plugins&filter_folder=system">Joomla Plugin Manager</a>)
+					</li>
+				</ol>
+			</span>
+		]]>
+	</description>
+	<files folder="plugins/system">
+		<folder>language</folder>
+		<filename plugin="keycaptcha">keycaptcha.php</filename>
+		<filename>kc-gettime.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="main" label="KeyCAPTCHA settings">
+				<field name="keycaptcha_site_private_key" type="text" default="" label="Private key" description="" size="60"/>
+			
+				<field name="KC_DisableForLogged" type="radio"  label="Enable captcha for guests only" description=""  default="Yes">
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
+				</field>
+
+				<field type="spacer" />
+
+				<field name="KC_RocketTheme" type="radio"  label="RocketTheme templates" description=""  default="Yes">
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
+				</field>
+
+				<field name="KC_RegistrationForm" type="radio"  label="Protect Registration form" description=""  default="Yes">
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
+				</field>
+
+				<field name="KC_ResetForm" type="radio"  label="Protect Reset form" description=""  default="Yes">
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
+				</field>
+
+				<field name="KC_RemindForm" type="radio"  label="Protect Remind form" description=""  default="Yes">
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
+				</field>
+
+				<field name="KC_ContactUs" type="radio"  label="Protect Contact Us form" description=""  default="Yes">
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
+				</field>
+
+				<field name="KC_Comments" type="radio"  label="Protect comments" description=""  default="Yes">
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
+				</field>
+
+				<field name="KC_GuestBook" type="radio"  label="Protect post to guestbook" description=""  default="Yes">
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
+				</field>
+
+				<field name="KC_JoomShopping" type="radio"  label="Protect JoomShopping registration and comments" description=""  default="Yes">
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
+				</field>
+
+				<field name="KC_AppCal" type="radio"  label="Protect Appoitment Calendar forms" description="" default="Yes">
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
+				</field>
+
+				<field name="KC_VirtueMartRegistration" type="radio"  label="Protect VirtueMart registration and checkout form" description=""  default="Yes">
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
+				</field>
+
+				<field name="KC_VirtueMartAsk" type="radio"  label="Protect VirtueMart 'Ask Question' form" description=""  default="Yes">
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
+				</field>
+		
+				<field name="KC_ADSManager" type="radio"  label="Protect ADSManager forms" description=""  default="Yes">
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
+				</field>
+
+				<field name="KC_JobBoard" type="radio"  label="Protect JobBoard forms" description="" default="Yes">
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
+				</field>				
+
+				<field name="KC_DonationConfirmForm" type="radio" label="JoomlaDonation confirm form" description="Attention! Select 'No' only if you disable 'confirmation' step of donation! Otherwise, the protection of donation form will not work correctly!" default="Yes">
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
+				</field>
+
+				<field name="KC_DonationForm" type="radio" label="JoomlaDonation form" description="" default="Yes">
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
+				</field>
+
+				<field name="keycaptcha_html" type="textarea" default="(lt)br(gt)(lt)div id='keycaptcha_div' style='height:220px; padding:0; margin:0; display:table; border:none;'(gt)(lt)br(gt)#keycaptcha#(lt)/div(gt)" label="KeyCAPTCHA HTML template ( Please use (lt) instead of &lt; and (gt) instead of &gt; )" description="" rows="6" cols="60"/>
+
+				<field name="keycaptcha_custom_task_text" type="text" default="" label="Custom text above KeyCAPTCHA" description="" size="60"/>
+
+				<field type="spacer" default="To help KeyCAPTCHA project please keep this flag turned on"/>
+				<field name="KC_AllowKCLink" type="radio"  label="KeyCAPTCHA link" description="To help KeyCAPTCHA project please keep this flag turned on"  default="Yes">
+					<option value="Yes">Yes</option>
+					<option value="No">No</option>
+				</field>
+				
+			</fieldset>
+		</fields>
+	</config>
+</extension>

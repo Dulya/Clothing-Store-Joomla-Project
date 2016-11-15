@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<extension type="plugin" version="2.5" method="upgrade" group="acysms">
+	<name>AcySMS Tag : Event Booking </name>
+	<creationDate>April 2014</creationDate>
+	<version>{__VERSION__}</version>
+	<author>Acyba</author>
+	<authorEmail>dev@acyba.com</authorEmail>
+	<authorUrl>http://www.acyba.com</authorUrl>
+	<copyright>Copyright (C) 2009-2012 ACYBA SARL - All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+	<description>This plugin enables you to add Event Booking informations in your SMS</description>
+	<files>
+		<filename plugin="eventbooking">eventbooking.php</filename>
+	</files>
+	<params addpath="/components/com_acysms/params">
+		<param name="help" type="help" label="Help" description="Click on the help button to get some help" default="plugin-eventbooking"/>
+		<param name="acysms" type="testplug" label="Test" description="Click on the test button to test your plugin. Please save your plugin first otherwise the configuration will not be applied" default="eventbooking"/>
+		<param name="hidepastevents" type="radio" default="yes" label="Hide Past Events" description="Do you want to hide past events?">
+			<option value="no">No, display all events</option>
+			<option value="yes">Yes</option>
+		</param>
+		<param name="displayToCustomers" type="radio" default="1" label="SMS_DISPLAY_TO_CUSTOMERS" description="Display the filters to the customers">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+	</params>
+	<config>
+		<fields name="params" addfieldpath="/components/com_acysms/params">
+			<fieldset name="basic">
+				<field name="help" type="help" label="Help" description="Click on the help button to get some help" default="plugin-eventbooking"/>
+				<field name="acysms" type="testplug" label="Test" description="Click on the test button to test your plugin. Please save your plugin first otherwise the configuration will not be applied" default="eventbooking"/>
+				<field name="hidepastevents" type="radio" default="yes" label="Hide Past Events" description="Do you want to hide past events?">
+					<option value="no">No, display all events</option>
+					<option value="yes">Yes</option>
+				</field>
+				<field name="displayToCustomers" type="radio" default="1" label="SMS_DISPLAY_TO_CUSTOMERS" description="Display the filters to the customers">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

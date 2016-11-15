@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="User : Activate">
+		<message>This menu item enables your users to validate their subscriptions.</message>
+	</layout>
+	<state>
+		<name>User : Activate</name>
+		<params addpath="/components/com_acysms/params">
+			<param name="help" type="help" label="Help" description="Click on the help button to get some help" default="validate-page"/>
+			<param name="activatetext" type="text" default="" label="SMS_ACTIVATE_TEXT" description="This text will be displayed on the validate button" filter="SAFEHTML" />
+			<param name="introtext" type="textarea" rows="5" cols="35" default="" label="SMS_INTRO_TEXT" description="This text will be displayed before the form inside a span class=acysms_introtext" />
+			<param name="finaltext" type="textarea" rows="5" cols="35" default="" label="SMS_POST_TEXT" description="This text will be displayed after the form inside a span class=acysms_finaltext" />
+		</params>
+	</state>
+	<fields name="params" addfieldpath="/components/com_acysms/params">
+		<fieldset name="basic">
+			<field name="help" type="help" label="Help" description="Click on the help button to get some help" default="validate-page"/>
+			<field name="activatetext" type="text" default="" label="SMS_ACTIVATE_TEXT" description="This text will be displayed on the validate button" filter="SAFEHTML" />
+			<field name="introtext" type="textarea" rows="5" cols="35" default="" label="SMS_INTRO_TEXT" description="This text will be displayed before the form inside a span class=acysms_introtext" filter="SAFEHTML" />
+			<field name="finaltext" type="textarea" rows="5" cols="35" default="" label="SMS_POST_TEXT" description="This text will be displayed after the form inside a span class=acysms_finaltext" filter="SAFEHTML" />
+		</fieldset>
+	</fields>
+</metadata>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.5.0" method="upgrade">
+	<name>AcySMS : Send SMS module</name>
+	<creationDate>September 2013</creationDate>
+	<version>{__VERSION__}</version>
+	<author>Acyba</author>
+	<authorEmail>dev@acyba.com</authorEmail>
+	<authorUrl>http://www.acyba.com</authorUrl>
+	<copyright>Copyright (C) 2009-2013 ACYBA SARL - All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+	<description>AcySMS : Send SMS module</description>
+	<files>
+		<filename module="mod_acysms">mod_acysms.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+	</files>
+
+	<params addpath="/components/com_acysms/params">
+		<param name="help" type="help" label="Help" description="Click on the help button to get some help" default="mod_acysms"/>
+		<param name="senderprofile" type="senderprofile" default="None" label="SMS_SENDER_PROFILE" description="The sender profile you want, the front end module to use" />
+		<param name="sendtext" type="text" default="" label="SMS_BUTTON_TEXT" description="This text will be displayed on the send button" filter="SAFEHTML" />
+		<param name="introtext" type="textarea" rows="5" cols="35" default="" label="SMS_INTRO_TEXT" description="This text will be displayed before the form inside a span class=acysms_introtext" />
+		<param name="finaltext" type="textarea" rows="5" cols="35" default="" label="SMS_POST_TEXT" description="This text will be displayed after the form inside a span class=acysms_finaltext" />
+		<param name="defaultnumber" type="text" default="" label="SMS_PHONE" description="This text will be the default phone number of your Module" />
+		<param name="defaultmessage" type="textarea" rows="5" cols="35" default="" label="SMS_MESSAGE" description="This text will be the default message of your Module" />
+		<param name="maxNumberMessage" type="text" default="" label="SMS_MESSAGE_MAX_CHARACTERS" description="Maximum number of characters allowed for the message" />
+		<param name="blockModification" type="radio" default="0" label="SMS_BLOCK_MODIFICATION" description="Allow the users to modify the message and the phone number">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+	</params>
+	<params group="advanced">
+		<param name="moduleclass_sfx" type="text" default="" label="SMS_MODULE_CLASSSUF" description="PARAMMODULECLASSSUFFIX" />
+	</params>
+
+	<config>
+		<fields name="params" addfieldpath="/components/com_acysms/params">
+			<fieldset name="basic">
+				<field name="help" type="help" label="Help" description="Click on the help button to get some help" default="mod_acysms"/>
+				<field name="senderprofile" type="senderprofile" default="None" label="SMS_SENDER_PROFILE" description="The sender profile you want, the front end module to use" />
+				<field name="sendtext" type="text" default="" label="SMS_BUTTON_TEXT" description="This text will be displayed on the send button" filter="SAFEHTML" />
+				<field name="introtext" type="textarea" rows="5" cols="35" default="" label="SMS_INTRO_TEXT" description="This text will be displayed before the form inside a span class=acysms_introtext" filter="SAFEHTML" />
+				<field name="finaltext" type="textarea" rows="5" cols="35" default="" label="SMS_POST_TEXT" description="This text will be displayed after the form inside a span class=acysms_finaltext" filter="SAFEHTML" />
+				<field name="defaultnumber" type="text" default="" label="SMS_PHONE" description="This text will be the default phone number of your Module" />
+				<field name="defaultmessage" type="textarea" rows="5" cols="35" default="" label="SMS_MESSAGE" description="This text will be the default message of your Module" />
+				<field name="maxNumberMessage" type="text" default="" label="SMS_MESSAGE_MAX_CHARACTERS" description="Maximum number of characters allowed for the message" />
+				<field name="blockModification" type="radio" default="0" label="SMS_BLOCK_MODIFICATION" description="Allow the users to modify the message and the phone number">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="moduleclass_sfx" type="text" default="" label="SMS_MODULE_CLASSSUF" description="SMS_PARAMMODULECLASSSUFFIX" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

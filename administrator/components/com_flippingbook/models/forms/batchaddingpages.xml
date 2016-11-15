@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="batch_add_pages" label="COM_FLIPPINGBOOK_COMPONENT_SETTINGS">
+		<field name="book" type="modal_book"
+			description="COM_FLIPPINGBOOK_SELECT_BOOK_DESC"
+			label="COM_FLIPPINGBOOK_SELECT_BOOK" />
+			
+		<field name="folder" type="modal_folders"
+			description="COM_FLIPPINGBOOK_SELECT_FOLDER_DESC"
+			label="COM_FLIPPINGBOOK_SELECT_FOLDER" />
+			
+		<field id="mode" name="mode" type="list" onchange="check_method();"
+			label="COM_FLIPPINGBOOK_MODE" description="COM_FLIPPINGBOOK_MODE_DESC"
+			class="inputbox" size="1" default="1" >
+			<option value="simple">
+				COM_FLIPPINGBOOK_SIMPLE</option>
+			<option value="advanced">
+				COM_FLIPPINGBOOK_ADVANCED</option>
+		</field>
+	</fieldset>
+	<fieldset name="batch_add_pages_advanced" label="COM_FLIPPINGBOOK_COMPONENT_SETTINGS">
+ 		<field name="prefix_page" type="text"
+			label="COM_FLIPPINGBOOK_PREFIX_FOR_PAGES" description="COM_FLIPPINGBOOK_PREFIX_FOR_PAGES_DESC"
+			class="inputbox" size="30"
+			default="my-book_" />
+			
+ 		<field name="prefix_zoom" type="text"
+			label="COM_FLIPPINGBOOK_PREFIX_FOR_ZOOMED_IMAGES" description="COM_FLIPPINGBOOK_PREFIX_FOR_ZOOMED_IMAGES_DESC"
+			class="inputbox" size="30"
+			default="zoom_" />
+	</fieldset>
+</form>
