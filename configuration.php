@@ -6,7 +6,7 @@ class JConfig {
 	public $offline_image = '';
 	public $sitename = 'Teen Clothing Store';
 	public $editor = 'tinymce';
-	public $captcha = '0';
+	public $captcha = 'recaptcha';
 	public $list_limit = '20';
 	public $access = '1';
 	public $debug = '0';

@@ -17,3 +17,10 @@
 2016-11-14T18:31:59+00:00	INFO ::1	joomlafailure	Username and password do not match or you do not have an account yet.
 2016-11-14T18:32:15+00:00	INFO ::1	joomlafailure	Username and password do not match or you do not have an account yet.
 2016-11-15T07:45:12+00:00	INFO ::1	joomlafailure	Username and password do not match or you do not have an account yet.
+2016-11-15T08:56:46+00:00	INFO ::1	cookiefailure	Empty password not allowed.
+2016-11-15T08:57:23+00:00	INFO ::1	joomlafailure	Username and password do not match or you do not have an account yet.
+2016-11-15T08:57:50+00:00	INFO ::1	joomlafailure	Username and password do not match or you do not have an account yet.
+2016-11-15T08:57:56+00:00	INFO ::1	joomlafailure	Username and password do not match or you do not have an account yet.
+2016-11-15T08:58:24+00:00	INFO ::1	joomlafailure	Username and password do not match or you do not have an account yet.
+2016-11-15T08:58:29+00:00	INFO ::1	joomlafailure	Username and password do not match or you do not have an account yet.
+2016-11-15T10:04:13+00:00	INFO ::1	joomlafailure	Username and password do not match or you do not have an account yet.
